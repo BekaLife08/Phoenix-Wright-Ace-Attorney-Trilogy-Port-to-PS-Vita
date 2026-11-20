@@ -1,0 +1,2434 @@
+{
+  "format": "pwaat-failing-forward/1",
+  "files": [
+    {
+      "path": "GS1/BG/bg00bu.unity3d",
+      "sha256": "a2e61dda249201d71d0104da9447c0d39812739be186dd7b2dac6162f63a87f6",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg00cbu.unity3d",
+      "sha256": "52b1481177d4df7debd28515fffc20c4b63e649a68622b896481fd7eab622d8a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg00cu.unity3d",
+      "sha256": "280e0a7068f3409105add7b637961c9151e6871616d59ff8e5039822b8381a8d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg013u.unity3d",
+      "sha256": "60f57fd58ede9999b220894a48cc3ea5836ee25479bb8618c5e672afc00ca164",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg01fu.unity3d",
+      "sha256": "3e8a00c189f86a519cff21a7cc152cea4521baf00fd9f1dd406cab6b6035631d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg02du.unity3d",
+      "sha256": "40f351bbfa4da844a278b06489e709f546a2dc46a275df11235349913daa17fd",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg02eu.unity3d",
+      "sha256": "2ff9b76c4cf31dc2693c9f766238ccfcfd904ff868fba1c68d74a865602fa8be",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg030u.unity3d",
+      "sha256": "33ada99719236fe6cad4c59a5fc7ec3811407953021850187e00d76b39de0f1e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg038.unity3d",
+      "sha256": "42d507ee98a4f8d20e2d03dedf0d8cca64a9bcec57b410fcd8d1bdb392b855b9",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg03au.unity3d",
+      "sha256": "899a3c002b8177fa3c5626c281403d4e892ce1a076944f6777a08874b3ab6f4b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg03bu.unity3d",
+      "sha256": "12efb154d32d137f5d85b8a624ac0428c9f430f5779f314ce96f33e4ba6a21f9",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg03du.unity3d",
+      "sha256": "2e472bdc5d4be9d2ee79959c768e0b55ff0dea41a0249f6eb81d140dbdd1da2f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg03fu.unity3d",
+      "sha256": "60704cfc7c063c5e750fcc6c9743a7e13bd754e2bfc0a6d6b071ff7fac304330",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg046u.unity3d",
+      "sha256": "e7d809853f2b9645994c0cc29ebe95bcfc41ef19f928701fbd899b591f1bff0e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg047u.unity3d",
+      "sha256": "8dcdbb912d55b3d0c2dda32967af9020e3f2f58052fef34a218e221145fc931f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg048u.unity3d",
+      "sha256": "e47a75426a5ec32a08543fbb5e59aecbc9c2c0fa5d73a43d1862a0385cda7515",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg049bu.unity3d",
+      "sha256": "4252c73e496f7c1681a14973b77bd302da624b1c72f98a06bde853b65db98e8f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg049u.unity3d",
+      "sha256": "4ca4f64faf63fddc48a2a6ba882aff7d2a71ed4d3d7b9ac19edc52e9b5b0f177",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg04du.unity3d",
+      "sha256": "275a3e61e1d9ea6ca8265b135fe4f80eba899933fa0735e4e511d521200277d9",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg052u.unity3d",
+      "sha256": "b7facba625063cfcb6bfc6cdfa3fe86d1bfa7912965f7ab3a8cbc88b8390689d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg053u.unity3d",
+      "sha256": "3d36e494a7813f7dcd22da3c3abde4431732fa15dd0079c7248445338bbaf7a2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg054u.unity3d",
+      "sha256": "79583116713c24188a8857ebe746a5b075527d8c1924f4fbb317d2597b46ccc7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg059u.unity3d",
+      "sha256": "bb97cbb7dc96ce8994e586d3a8e07a80d971669fbd8e9ca222cc17b6400de6a7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg069u.unity3d",
+      "sha256": "ab65319ac289f53167811632e9f84bcece8c69929f56158005bb796fcd14cbfd",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg072u.unity3d",
+      "sha256": "d6539e7ff652a4b0ab37840d8030e5d34a2d8dac26c658794128bc96e00f5cdb",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg074.unity3d",
+      "sha256": "4a3dd440ebcff95bf7c4e749c8d544388655c56578976e939e1cde5df07be5eb",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg074a.unity3d",
+      "sha256": "fec16398c049795e93b21977c3aaa3ee9e5f3261ebf7f8fcb5b991a2018e170b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg076u.unity3d",
+      "sha256": "1cb44527cea202d2c1691426d8656cabe2328711cc59c4280e2e4a625f456a51",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg077.unity3d",
+      "sha256": "fe4bc131af0b09021b7475bd5af1a831a739c03c65e5bd90e04b61333c093fec",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg079u.unity3d",
+      "sha256": "d90cbca2f94cf74ae0ecc04d9aaadb80980c07db768559f0004fca8e504cb6be",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg084u.unity3d",
+      "sha256": "e310bcbc0ef783696c08c12fc027830111ac462f693af669b9e32a2a895e32bf",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg089u.unity3d",
+      "sha256": "06de8cfeb4c4a968a8682e6ac3f5f9a3fc66346dc6f38843b1a8eb6459a1ed25",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg08au.unity3d",
+      "sha256": "995212e82372b61847852f1e68b05a374c1751a9ea0835bf4e4c6afee723a956",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg08eu.unity3d",
+      "sha256": "74589ae96a95b57f240ded5ffed3f0cc73a4440ddff0968e7b6c03ee09b361eb",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg090u.unity3d",
+      "sha256": "676138644269ea232e0c2cb16a37c488c61d708e5222d45d071ed3495f8d7a5d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg09du.unity3d",
+      "sha256": "1e9f9452f5ef239425fe509e32e002ac067787404882224eacef38bd7ce703c5",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0a5u.unity3d",
+      "sha256": "56379e26456ef849ee72ecc196026ef6c153deaf1fa6d1823227047f4568b390",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0bfu.unity3d",
+      "sha256": "d39cb3525f7b3c4ebbdfc7c37275fd9a9eda4eef659158f6dc493bcd4f842233",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0c7u.unity3d",
+      "sha256": "a83a95346e979289a0fd0c6d63042464623f5b8aa122b0aedb1d62029e1e6e14",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0deu.unity3d",
+      "sha256": "0cd556c89a9edde2a95848fcead3c7e12cd20f4791431d64edac709abda2b2e2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0e3u.unity3d",
+      "sha256": "063e750b92bb3dd0272f44f05a960f1358c0eacb510ccbe059b5f5f3af054df4",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0e4u.unity3d",
+      "sha256": "3d22afe525fd63ec63ea909997c35a16d96f102c8c523a575517e32c8c20959c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0e5u.unity3d",
+      "sha256": "cae6d5263b16ecee82241147f6f3f4354306dda2322075b747f06d2076a5fa70",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0e6u.unity3d",
+      "sha256": "d826f3d961f1c96d6696a5d2a6377e5416f310b704b9a46e4f1c1a2035e8d4a7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0e7u.unity3d",
+      "sha256": "9d4d2e050a97d213cefc295d1df3d74bd2a906896eb94e5affbaa8227f31f1c1",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0e8u.unity3d",
+      "sha256": "7d1b3e26f4afb61f325c207462b523cff79fccdfae488e1269dcd183f1c81c71",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0e9u.unity3d",
+      "sha256": "cfe753b2a259f9856ae61dc79dd5b7d28b74f340bfa17f70c654e7887ffaa12e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0ecu.unity3d",
+      "sha256": "e3e19779500795ec08c632824773c97f2693e1e2bf1ff9848e12da4b506b6a16",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0edu.unity3d",
+      "sha256": "5d03ab98aaadee9ab7cf705aac262fa3bc3555b3522b24e10418dd23bd1d03ab",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg0fau.unity3d",
+      "sha256": "ec2e6ba77502584db23a5372df98c8d5cc23f87e31b36dc14160b77cb7816250",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg103u.unity3d",
+      "sha256": "de78f1421615cf3861ecb842bf24c9f4a3e324a3e36b6114c3d79b2f8e182fad",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg107u.unity3d",
+      "sha256": "e2232c48bf1211fdd993827b254a496801e8de05bf476630ce4008bb7c47634a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg115u.unity3d",
+      "sha256": "36822ab99310e79f94a25b9204c6f14c28dfacf3726e2f02c78cbdbe10b2c529",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg116u.unity3d",
+      "sha256": "bea7e5c1309681cd78af4f36cfa6b45d14ba3c6599a7ec52a2444864c55fecae",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg117u.unity3d",
+      "sha256": "f79157fa28b66c83baae6e667f2c4c86249a826728b7a498196d15cb816d0572",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg118u.unity3d",
+      "sha256": "05ebb0eb1d0bdf6a72c60732c83c6398d396f4d677934330448d8b5dc7b75fbc",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg119u.unity3d",
+      "sha256": "3b8ad755cade4672f933af1a32fffb6c386e63c531230e84d5d9799d498af284",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg11au.unity3d",
+      "sha256": "150c6e44e1f0a7dfece48c65ab48337793e287871ffc3e16eab696b263494121",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg11bu.unity3d",
+      "sha256": "38302a2685fc6a7436fe559ad3b0ce237eded4a012d62599209d523d62ffb762",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg11cu.unity3d",
+      "sha256": "5eecee72a279f4b8bc5b8c429ca46068580fdde8df33827c4223e3ac694af30a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg123u.unity3d",
+      "sha256": "a2df27ce02206c51d79b9dbf4f0faea82d6787cc76e7ad946c6274637bc14a72",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg134u.unity3d",
+      "sha256": "ef4654c4aeef114387a03f06a89984e4a414369a59f987594c92e1e6e2b99c09",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/bg140u.unity3d",
+      "sha256": "ec47bd9e8e7da3938b4c3d76c98684606b1878cac4aacfe36fdd5cebb2340ebd",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/copygs1.unity3d",
+      "sha256": "fb972b6ed65134e34976222541bf925b0d81412efc5f54a171ef7db19073e5c0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/storygs1.unity3d",
+      "sha256": "9a523d5574e914c6f8dd1618c52455496372d5b0cac5021eb8e732d795876ffb",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/title_textgs1u.unity3d",
+      "sha256": "a41b5e6e427598a1857f979d2dde87747ee2d0622eda3031f247294e422c92db",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/BG/titlegs1u.unity3d",
+      "sha256": "9bf9a06b86ef27127724920a9ab9e4243fe7118dc47af2e3381b7d063214edc3",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/TextureAnmRelations/Etcs/animationset_etc002au.unity3d",
+      "sha256": "c32bfa9053742b7cac7849909ea116875500aec10a961320c8a6b46390e466d8",
+      "animation_fields": [
+        {
+          "name": "etc002eu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002cu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002au_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS1/TextureAnmRelations/Etcs/animationset_etc002bu.unity3d",
+      "sha256": "851be4cee8696c5856199b9d264e7ec1129f039a76e0ab1cfb85007dc128f802",
+      "animation_fields": [
+        {
+          "name": "etc002du_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002bu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002fu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS1/TextureAnmRelations/Etcs/animationset_etc051.unity3d",
+      "sha256": "5cb21a29e231c5313d076883859586a61927d8d4efdb774d5abe4a9e97623f87",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/TextureAnmRelations/Sprites/animationset_spr402u.unity3d",
+      "sha256": "eb5561c10e3ea48da344d8d66254d6d9f5a9a6b7cac1fd62cc3be84fc2dbfd56",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/TextureAnmRelations/Sprites/animationset_spr430u.unity3d",
+      "sha256": "8b34e71372f31a0aae62a4af35f73635013dcc74eafc91d985b6f62df91c5d39",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/TextureAnmRelations/Sprites/animationset_spr436u.unity3d",
+      "sha256": "50b77de4199efde5faf8698bed9d0151e171f234725a4c43a8dfe7e5eabf0b40",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/TextureAnmRelations/Sprites/animationset_spr437u.unity3d",
+      "sha256": "720cb403b56a3285d502802e2c48d03de92a7aad928b70ada586c867764a259d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/etc/etc00au.unity3d",
+      "sha256": "7db4b208587a7790e0cf4ed834483674ceb8a054a99dc65c4e279320597b3f33",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/etc/etc00bu.unity3d",
+      "sha256": "94a60b3c715c15a68ca9d1e72a0f0ffb00895f385081944798a82a2b7a0facd3",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/etc/etc012u.unity3d",
+      "sha256": "208d3bc21cf48361f5703d452eaa3852f273812fb5b11a39e398d06870b76a9f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/etc/etc014u.unity3d",
+      "sha256": "ebf2341abbca0fff9de84ff77947a72f023cf1d95e67c412ac2b9ca0072ea5a4",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/etc/frame02u.unity3d",
+      "sha256": "cec4c02e5d13647f0dd990af12b522f2c89bbe2f76e2a8b6fd1d13e76681f43e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it004u.unity3d",
+      "sha256": "22895fd5909b8992570ad0372ad8056c9e8cd3290033a8e366ca7039f2d2d29f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it018u.unity3d",
+      "sha256": "e53d71d0908dfb7c0993ab54c7605f8321d5b8b6ffada3d50834d2701b4d673c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it022u.unity3d",
+      "sha256": "06926b5feccc79031bf43e60873442cbd4068c0a98f92746e0eff8013a2165c7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it028u.unity3d",
+      "sha256": "34aa0bd94ecbc4ee06d6007415f589c8130a434eaa40e19ca6bce09dcce9deaa",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it041.unity3d",
+      "sha256": "08b7b4a73d20074065873afa011b5d4e5c0a44b5ea7f27c0677485e00f6bd6ed",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it048u.unity3d",
+      "sha256": "44d32517155fee0a83559c5f70e1b854f64886853b485111dcdcef4dd3989f4e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it04au.unity3d",
+      "sha256": "e76d220574c6fdab95a9b2e4f65937199334a06999c8e3edc3b27e30c446faea",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it04cu.unity3d",
+      "sha256": "3a37fca1c8c4d20f1cdb16f630403a7ca5445c72471741ef6de163e8b30eb05c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it04du.unity3d",
+      "sha256": "29465fee8119cd798225e97db197768bf46830e04509a32cca168c72a654c306",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it061u.unity3d",
+      "sha256": "8ecd75bb7b00eb9ceebb0c4c7e0495fb0ad96560485fde95a4136652671b9b45",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it06du.unity3d",
+      "sha256": "9298f25a6544be0c7df6ce9d439f9ac355fe7306a2b06936109b24b377826316",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it082u.unity3d",
+      "sha256": "a09e226a8ad1fc9cfe7fde44f3dd356fd02239c75ac9d9b55001b66aec0e9c65",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it08du.unity3d",
+      "sha256": "62313ea10c4d56a0cbf06c8234cef274eafea7b6020dca9865e19a98d89e4f85",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it08eu.unity3d",
+      "sha256": "13dadab8d229fc3d83ebe1eb7822019af1478b8f6ae5e71ff922783eb21c5b11",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/it090u.unity3d",
+      "sha256": "2b87a89f915792fafa598af8e0bfea213cbf2de368f63756d07adbaa8207baae",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc004u.unity3d",
+      "sha256": "fb0b3d3f39025bf516519bafeee22de4ca6a2f4196682ab6e875f73fbbda6a73",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc018u.unity3d",
+      "sha256": "663dc63bc8216a63c3dfc60adae5703a27cf3bb453a04457ace14f2d112e18c8",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc022u.unity3d",
+      "sha256": "03e5a389cb7ca4808e152d719754d3ffb85e1b25d441f087107138ce8b09d677",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc028u.unity3d",
+      "sha256": "68cd50cbc112dbf819b6ad218322877cecc310a0818163f970a8fe62e9e0c706",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc041.unity3d",
+      "sha256": "6eb152d1241782159ad49894a8d9b1a4cf9421bb56b52067b8074143c712bc2c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc048u.unity3d",
+      "sha256": "65223cea3ccb95858c53b8cbbec0a8ffee19ef74ad14ca2d65949e955f9d6d88",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc04au.unity3d",
+      "sha256": "a05cebe88bf6ba8422530ccc31890b5e3252ab938dc89dc3ff1562964eb1dd93",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc04cu.unity3d",
+      "sha256": "01671ad91441cd9d021cf919aec9f1921231989319046831313e5ba6f3b73c3c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc04du.unity3d",
+      "sha256": "ce1edfe1cc141f73becbd2091c95e62edb88dc5c00b95e4c8607aed5821c21c0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc061u.unity3d",
+      "sha256": "31a98f19776256cfa0c24b4d3af760c8c1998af39c8e04af6018c77b1c4f4b6b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc06du.unity3d",
+      "sha256": "198421777299ab842019ba7fbd1174c3385f2979ba0ec0ff9ee952215e16e2a6",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc082u.unity3d",
+      "sha256": "27dd994b7ce444c0e97f41cb219db06dc9a094079748a1312a630c43ad5d3092",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc08du.unity3d",
+      "sha256": "a082ec90227c9cf26c2cc39eb0520d66950e77a4af6550da675d539bca5be82d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc08eu.unity3d",
+      "sha256": "c47f3083822ff807e3c0ecf84e6471195df0628aec14b7a3157f4d45781f0531",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/icon/itc090u.unity3d",
+      "sha256": "710c5139f38c93699ee51d4eb1236cc8d2b72b3b83e06554974bd9912d62dbb0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb000u.unity3d",
+      "sha256": "456f41bd52a901e6aa217309009aa43b30b1df13490d958d0c837086c2720048",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb001u.unity3d",
+      "sha256": "55e3621e7d9119d3d5567eb9675e187f1c1be7dc06b39f95d934517f6acc5be7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb004u.unity3d",
+      "sha256": "90bc5940da9d6d7472bc815bd3e1fbadaaf0909e1d2fc72180ae12f221869a54",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb005u.unity3d",
+      "sha256": "2dfe4c70c0331968fc7993295814f3e68d6d2ce3ad4092815018d71f236af045",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb006u.unity3d",
+      "sha256": "3033b44b56f3f6cdc8b30620c8c5d227a9885fa2c9b26c9381ca73456e5abf85",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb00eu.unity3d",
+      "sha256": "f2170fe14785b9fed98b6fe2864252556660d36f913eb2f30d85c08e7428e3d2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb018u.unity3d",
+      "sha256": "600fc19fa9bb4888f92c9463687bcff13027a73b156627da2dd7826b70627e79",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/itb/itb01cu.unity3d",
+      "sha256": "3ce3913127cf0ab68cadbdbdf077b8a530a584cdb2d2729cc912e989b057b81b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/minigame/eff004u.unity3d",
+      "sha256": "977201faaa6684a9b715f5a7ccae45c90f2342e084d688aab591dee562cf6e47",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/minigame/label0u.unity3d",
+      "sha256": "40a3b309cae6501c6e941363ba0b624e39426fe4f73bf5e67b9b52ceb5873160",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/minigame/label1u.unity3d",
+      "sha256": "839581ecbb26ad1ef9cd8f11e0b3b495683637a544cd51000782918c37b1cca5",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/minigame/label2u.unity3d",
+      "sha256": "40f32184cb77027929a3c4be0647c534e9d89671d589eae9d65efd3be7c4e811",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm0460.unity3d",
+      "sha256": "b102c3f2b696b618a88e941931e44f1646e5c53f54b1c782b7c9971701f4dd77",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm0480.unity3d",
+      "sha256": "bba1bea03c4d77930095aca1dda9ec8de5894e2c1af3eba5dc3269751c430207",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm04a0.unity3d",
+      "sha256": "8ada618e423a4ef0bc42541a718830c13b4174e21ae420fffa0fcdf1c138c2bc",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm04c0.unity3d",
+      "sha256": "3ee94ab23ff4aff3134de3d27a0c52bc1d7251ff6496600994002ce6e7fbe104",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm0540.unity3d",
+      "sha256": "2053319bcf94de70d795597f8d4b35530848a524a036c2f53ae620d3bd0585ab",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm0610.unity3d",
+      "sha256": "c56ed9a020cbc718b37ca35898041011b5b8547db9ba5a74dd9f416feb992a86",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm0820.unity3d",
+      "sha256": "944b44acbffdcf849d72647cb27ce80ca0c67c3062072f27dc8a8bc1ee4244d4",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/science/itm0830.unity3d",
+      "sha256": "1c7b434758d843e87140650f79d323f24c1f15d62b93c3c55fe345fd24473ef3",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb03u.unity3d",
+      "sha256": "47c3dbe534494b1be3212ec6b6dbbec720139392747fc3dde68de6051874ec18",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb04u.unity3d",
+      "sha256": "d63bcb1ae979bc47fa944c1b270c9f7d4f94b81c958507d06d08b306044591ff",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb05u.unity3d",
+      "sha256": "ebe608568a68310866039eeaba57fdbbc68c510ca9faa3536ceb21e345c29228",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb0au.unity3d",
+      "sha256": "1a2c12dfe4c1e5a822865e66443c73f7c5b66027d75f4ebba2a025d21805cccc",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb0fu.unity3d",
+      "sha256": "00c836dbc81151b3626c90a24961a6cc829dea29a5bfe0d9dab7aac46ad56fe7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb10u.unity3d",
+      "sha256": "25ef646193bb2dddcb5fac9cb24b1d00882961ecec44a6bf7265794a16a3bb8f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb11u.unity3d",
+      "sha256": "480487866556bbfead2f565611fc1914fde68dbc4d08d58fbea7411076d43329",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb12u.unity3d",
+      "sha256": "26f2f1e0b8f9f869fb0432947df0b1707c86f2311e92fc24c7dc49eedb167e57",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb13u.unity3d",
+      "sha256": "19236ad39e1f6305772a52831f96a19433a83ec7d10ca5cd190510b427b1baa0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb17u.unity3d",
+      "sha256": "008d7c3a7f3cce2c82919b4f7fbfbd7f230bd2ff810993bac4e2fe18e32097e3",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb19.unity3d",
+      "sha256": "99d4afa52cb4a393e51c8f5c37d8b006f515f72d5c48ffbb29f1c5931dad449d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/thumb/thumb1a.unity3d",
+      "sha256": "9939250d1245982733b1d47698d4c6ac1d004d8d099f520774e059979980e517",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg101u.unity3d",
+      "sha256": "b46e996b1d62278ba70e86bd2a1718a6509c7c99555b270d6772d3c44195cad6",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg102u.unity3d",
+      "sha256": "647d5d4d6b120bf4755187de2cd0b4c72427662b02fca9884f59b1145cc3b1eb",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg200u.unity3d",
+      "sha256": "5ad1534d40158346f549911c06898bf11f9d17b3e0398dfc8d9157c9746f618d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg201u.unity3d",
+      "sha256": "eb9bde0e3ec76fcef7b5819ccd6d71c3296f6c3f0412cfb69fe51b873058eba0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg207u.unity3d",
+      "sha256": "13f2fb58d7963a972d0b2120cb116d89a7b415e382a5bf472ccaa89606043f77",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg20cu.unity3d",
+      "sha256": "645b0328a4eb4fb298c4b24e0f99c6e610f6c3fc243cd31c73c9376ab6757317",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg20du.unity3d",
+      "sha256": "6998689a460a53f3eba56f6824da88f4dc754f23bb98a3134fc6ca19027dea50",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg20eu.unity3d",
+      "sha256": "22d6787f6a22f3b69d7c59fa33a0924fb0421a39adaab6d013b4cad00277a651",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg210u.unity3d",
+      "sha256": "4ae5ea6df15d26133da953ad0f9640100f5e1e76e9a395daef68ac115ffd7e1a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg219u.unity3d",
+      "sha256": "5fba410d57b9702de6091d5910d4e611a5a966df4e7d6819641460d10e0e4bb8",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg300u.unity3d",
+      "sha256": "877aa4c3bba741dc8c97268dfbe55d9ccf1ecceb3d647b0a6fa290203640fa1f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg301u.unity3d",
+      "sha256": "a75f1ffa32d560809b9dee2f6e0e19744248157bb574788ff8096055f2873ff1",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg302u.unity3d",
+      "sha256": "64367872b756532ba9002dbcc76344b769e41b9c3cfec36040127fee2f05db91",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg303u.unity3d",
+      "sha256": "df07689c147625070357492fc549e5126b4184160627208dc8b9fb4cbde84609",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg304u.unity3d",
+      "sha256": "7554a0631a59fed5a4aee92e94d21f672d085ae83bc2d1ce039f8fdd007a9ea1",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg306u.unity3d",
+      "sha256": "22a7e34c0cc5dc7bf9cc2b714619496483884ac3eb92730e7246e948fa0cceee",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg30au.unity3d",
+      "sha256": "472d2d3dc6a647f1318de03d7ec374df12cdfb6dedf7c130d24933be994b471b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg30cu.unity3d",
+      "sha256": "2bc159a1e2ff8da01b0e863970355a7d97f8da5efd04971d422a8795f85827c0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg30du.unity3d",
+      "sha256": "4b3b22fad4e0eff8e725c421aefe4140c80bfcbea748b41ac6ad30addce80027",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg30fu.unity3d",
+      "sha256": "fd5565ae9616086b3fa4209c1bfe8856c97751d940f66a703358e02f1b533b40",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg310u.unity3d",
+      "sha256": "5267ac3b77fe53d116eb57cfc5a814339b8496e68de9a3c6653194222acdfa06",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg316u.unity3d",
+      "sha256": "266d7fec7e7f9d704352415aa3c8c650f524e05698022bf179dffd9fda5a9521",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg31au.unity3d",
+      "sha256": "b55b00d3fd3944f89a90ff2bdb46c487dc3da9f63f071b3a5f488038b43d56e2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg405u.unity3d",
+      "sha256": "18812c211ddd4102397dabbe5a93b58afdf9eb1bb61e1a3f6eaa60fe15c9536a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg407u.unity3d",
+      "sha256": "68b8e5edc48cbecbc03c407de327fd977630cfcc7a0c3145dd1ccfc6401b0dfe",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg409.unity3d",
+      "sha256": "e81056363c6e0eaac03af0b9eb1eff2137f3b3efd80ba9161be0c9bdb80f9186",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg40a.unity3d",
+      "sha256": "e4870cb0bd6593037589d20d8e7bcc9141ff15be8ddb97c19cbba180a8258aad",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg40du.unity3d",
+      "sha256": "4a2d86821bd60f5590c4308d1c85732576b24aa403056c6217d09e1510bf7a12",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg411u.unity3d",
+      "sha256": "919e079e81ff9038a7ca30c1840da8b111f512234d4c2a0ab3781b22c903b8d8",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg414u.unity3d",
+      "sha256": "f71c1724a3e57fef9221f73425dd933b411169cf9351678fb87fc4f9e1f22a05",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg416u.unity3d",
+      "sha256": "ac701ef5e18d12bbb87ee4f8ed7aa2fe31221eba15e3129facc4d8d739317a7c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg420u.unity3d",
+      "sha256": "acb06a703c8a44009c6a70c7d31799dfd07a61908474ddff658768a7f2acf9d0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg424u.unity3d",
+      "sha256": "309f935d39185397f55e37e481b82facd5f61a6918da3ebcd679415bd788de4a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg425u.unity3d",
+      "sha256": "f26abc03a8ea4ced9b809f7a851406d3451b899b758fa4ddb1924824b9ebec19",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg502u.unity3d",
+      "sha256": "7aeb7f1d76e78183cfc6d28125e771f948ca5a088ad1e43b6df552df601c3333",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg505u.unity3d",
+      "sha256": "71752cb70b5baa22d588fda1ebce66875ec5da598ec65c7d1f25c5900c43571c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/bg50du.unity3d",
+      "sha256": "d053752cdc583d834a3aa8c549ecbf5b0a84881a7c505f7af6b594a6eeaa8e38",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/copygs2.unity3d",
+      "sha256": "94dbc22ffb588b04060cc33cf341a3a64c9189e91cf4e64672e8bdc95b42afbf",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/title_textgs2u.unity3d",
+      "sha256": "12360b2ebb5388098052b04321ce436fa99fc4f358136e3a7c8037b549184b6e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/BG/titlegs2u.unity3d",
+      "sha256": "d81eb788638f5aed2e16bc462d14293efc3afdf7f2a2808635096ea36143e7f0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/TextureAnmRelations/Etcs/animationset_etc002au.unity3d",
+      "sha256": "c32bfa9053742b7cac7849909ea116875500aec10a961320c8a6b46390e466d8",
+      "animation_fields": [
+        {
+          "name": "etc002eu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002cu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002au_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS2/TextureAnmRelations/Etcs/animationset_etc002bu.unity3d",
+      "sha256": "851be4cee8696c5856199b9d264e7ec1129f039a76e0ab1cfb85007dc128f802",
+      "animation_fields": [
+        {
+          "name": "etc002du_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002bu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002fu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS2/TextureAnmRelations/Etcs/animationset_etc019u.unity3d",
+      "sha256": "a4b9cd96e2823b660978389b36a655c06571512cc23ff1e1d08f0aa5fb850ef6",
+      "animation_fields": [
+        {
+          "name": "etc019au",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc019cu",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc019bu",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS2/TextureAnmRelations/Itb/animationset_itb008u.unity3d",
+      "sha256": "de22292d947762a195bfa41ca7e1aabc0e3bc058bc9c545d750c0b895173d3b0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/TextureAnmRelations/Sprites/animationset_spr403u.unity3d",
+      "sha256": "6d93c2d92505d807707e5fa757de58794032114db0f1f76a1364acd7f2f3af2e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/etc/frame02u.unity3d",
+      "sha256": "49435e4968b80bad65e4423cc174c6a69a4d8283382528b594bf7e8396e50589",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/it016u.unity3d",
+      "sha256": "ab9d363c7b44198fa13e1bc3b29759dccdd2e678fa888425000b3b22418cba41",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/it018u.unity3d",
+      "sha256": "db265eceed56a5d55598bde8c45fcd766a0bafa08d1c6a5ab5711700dfca44be",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/it03bu.unity3d",
+      "sha256": "db5b1964a1f90d8e5fa23569cd4d25d5cc070c9bb8c05204b39b95ef20529f1b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/it052u.unity3d",
+      "sha256": "1a4cc95a4c76e6a386b441f948712d0c51bff344cca57facfe990ed67cc8a234",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/it063u.unity3d",
+      "sha256": "d44112729b3eabedd5f22587d73df6a234bf6b71f688c40e1531a1c8d98d7a96",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/itc016u.unity3d",
+      "sha256": "3d28c08166f6023428411e7d99210b3d12642052e94b73560a520510d147398d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/itc018u.unity3d",
+      "sha256": "f6fac9b38d5a0f8f19b685e727511548ca1d69d868757c357c5a5cb594205f06",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/itc03bu.unity3d",
+      "sha256": "c153b538459777aa8eec436a9e3ee8428ed6c668bb93b24e7a9402dbc91b578c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/itc052u.unity3d",
+      "sha256": "c0887ebfedd39c1c27b64cbc8273b56a828a67bbc0d27d77b203aba6aceda9ee",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/icon/itc063u.unity3d",
+      "sha256": "1039364706fac9b9cf0b2aa6bb3129976377bf9e29a985ba18d2537956f75d9f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/itb/itb000u.unity3d",
+      "sha256": "1a0b8735a300eb2efd034b6298faa4af2db8f95c1b2acd013e80a7ae0c5bb8fc",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/itb/itb001u.unity3d",
+      "sha256": "09254d285997661384eab49b6800ec85cd8b807ccb80ebfed49cf099bd2b9ee8",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb02u.unity3d",
+      "sha256": "ca14f4ed0418614420eb38ed1917fd32e174a6ce772505e9c906bf14b5a0058e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb03u.unity3d",
+      "sha256": "ea453c1e6de8309739a9632721618ab23d586074acece79696b01dab0c1799f4",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb04u.unity3d",
+      "sha256": "57d8c61312f4fc610e4ec93bc9feb781c3b691047a92ef636383789720d32b34",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb08u.unity3d",
+      "sha256": "2f32714ceb0afa03ec51f80a8506b138e1a30f56c25f78499a3cb93a4fd36c59",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb09u.unity3d",
+      "sha256": "8bcb540e1adf0bf8ed059e07ded9daf7e221f292e595de3524be8d33290e2741",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb0bu.unity3d",
+      "sha256": "aaed675494e624ff3a2adcd876829aaad8f288f9acf6df0d939ed216a82b5a67",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb0cu.unity3d",
+      "sha256": "8abdc0afa9a3f274a4bc77aae104afdc4b80ab4f8074a34de70d67b587eb3cc2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb0du.unity3d",
+      "sha256": "c7e06a8934e6d00aa5b79a3f5a47a33df690d1a050fea725da5a63853aa7757b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb14u.unity3d",
+      "sha256": "a485a6e69f8614219ac2eb0d295d8b77790e940ab95b8b1aaa4fa86d600e7713",
+      "animation_fields": []
+    },
+    {
+      "path": "GS2/thumb/thumb17u.unity3d",
+      "sha256": "01eb38cdd0e3881b46e555f90d14f4be2b10547059ddbb5c6f9029d750d39507",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg106u.unity3d",
+      "sha256": "aaed9fb1c3c97ca5bb9124056c15e7b7a969e9647d56873aaea66fddd5fb4a55",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg109u.unity3d",
+      "sha256": "36ce69b5de68c75c430c8a1d504ce7f4e6e2c451314701f38e7907908c9c490b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg10au.unity3d",
+      "sha256": "b78e33aafd547947bc30bebdefeb8abc3e4abd1c3f41211da47919f08dfeef89",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg10bu.unity3d",
+      "sha256": "6e103219cbddfcc2f0b718c83b630a6cbf34271d729aaa5c64226257075e573a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg200u.unity3d",
+      "sha256": "8a8d23d31f8aa3a11cf1b65a77b0fe412899406f18c85b0e3494fd3aaffcb3f6",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg201au.unity3d",
+      "sha256": "67297b18394986fc96a360075101b11f7d75e9caea450c7e4a26469f80fa7d8e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg201u.unity3d",
+      "sha256": "0f1de25899b10b82e47706bbc97cbd749e49eb1a1fd0381fa2f70ca1335df232",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg204u.unity3d",
+      "sha256": "3a48a7f41c26c8379bdaaaf076947f6a66e995bf3c72b132aaf61908c93493c5",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg205u.unity3d",
+      "sha256": "570e4b3d38680f6864ec4b034e4c80cc57d1688cea25621cfc1f930762159326",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg206u.unity3d",
+      "sha256": "f2c382c0d6bfcb8b6182ecc09f896a491371a6ef91e32ef93d00231679e5b2b3",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg207u.unity3d",
+      "sha256": "b26cbbfb9c5952ea6bbfdf0104e18304da38ef538760cedeeb3e40e3408e1a05",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg212u.unity3d",
+      "sha256": "8df514ba93ec570591b286359e0a43f87c03c0709682a2f234f33480ed9e951a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg213u.unity3d",
+      "sha256": "803873935cafea8d0943ef72989d3b8404bf4307424061f935d67596d233a75b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg21au.unity3d",
+      "sha256": "10487e3867d8906d6496156cfc968e1a06e1abdf81eeca4ec61fcd9d6963722c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg21bu.unity3d",
+      "sha256": "27a43ec80f611f18609caf429d3e03b22165afe94b4c979e1049b64ddaf0ad73",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg21du.unity3d",
+      "sha256": "8050276923d22d949ff4147e3cf71a3dfd633e3ae5ba2d3be8c0dfa4a3cc753e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg21eu.unity3d",
+      "sha256": "f56bd5cc339821d4bc14dfb962519d64ba6eded94e2b5fb5ec94505cef7a6f28",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg224u.unity3d",
+      "sha256": "960ecb26851da3260f2042db04205cb76b5e659835f86778af34e69749bd6c99",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg227u.unity3d",
+      "sha256": "794d8459f2eb06b61bc50d143f63ea4abd7aae8a7d8e727ea33dc4774481452c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg22au.unity3d",
+      "sha256": "f815f3e5fe50afc5ed1bb5eebaa4e9fd901295a57c22f3caf24851008f460142",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg300u.unity3d",
+      "sha256": "a4ecaa78f98e444e9e462e50d62260fbfaf471eaf841cea8574f162644858675",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg302u.unity3d",
+      "sha256": "12954b63ffb1a8404bf798edf1a62094f582353b099b4932f35b1c4b6ee0dac1",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg304u.unity3d",
+      "sha256": "f0fc14d634a8a7cf25f0d3663763e1a9c4f94727cc60a0faa9db7dd96a5e2030",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg30fu.unity3d",
+      "sha256": "401a4e639b183bfc79097425f74d930c348293875846bb5214d4f769d2c11c66",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg312u.unity3d",
+      "sha256": "cc44166b69c1554bd2900441449ff5a143dd454a873f6d786492b205377c7233",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg404u.unity3d",
+      "sha256": "b7df74ec9695f9288c9cae53fd2d0d38c7e9aaee5b061ce73d8278d2e70848fe",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg405_2u.unity3d",
+      "sha256": "289ac381460aafb3687144c649141fe99d33b1b5f4aa2b27bfc3a9cdc813883c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg405u.unity3d",
+      "sha256": "3615323d99c5ddd6bf9ea397b2e599b3705f0415a4455a0875d72fc6ec750bbc",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font10u.unity3d",
+      "sha256": "239adb4bfe36a3a27ad4e4e482a7ccee31e78b543ab504311fab249f2fd2326b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font1u.unity3d",
+      "sha256": "dcac9cdac848ae75c0766d1454569f3bd7a7e3881d6751b29af2d4ebf10520f0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font2u.unity3d",
+      "sha256": "a80f9069eb6d16b398c7b2558dca4e67a31f8d178aa8826ad1c8bef47578869f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font3u.unity3d",
+      "sha256": "a0266bbcf400284e427762513b7181313b931de654b8e56a5ef044cce9fbe7d2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font4u.unity3d",
+      "sha256": "2cfc3aaeedebd31c5668f6fd16c23b31328e689d0f25db1c37ab51fb83bdd5c2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font5u.unity3d",
+      "sha256": "b9909c2650e528eb1b983faf02c7281f880618cdc9f9e3d43fab9c88f1512416",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font6u.unity3d",
+      "sha256": "e5a7f49606d3547da213b1a6387cdaa5657701b6956031daff908afac347e298",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font7u.unity3d",
+      "sha256": "d7e3f750ade108b9af853569e3e78fd691b387b5ae1e84a576d2ee4eab6142d5",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font8u.unity3d",
+      "sha256": "c88e243e81a597ffdd7b06ef6c23a0b48796a821a20c5cc56fa4771105eab7b7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg4_font9u.unity3d",
+      "sha256": "1fbf0a2142e0658d9524680aaafbde02a7daab21090866fb29d1026adcd1bfc2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg503u.unity3d",
+      "sha256": "8ead689ffdd80078663ad1a28d10e5246fb70f9be9a72f70dc6e33b4242382b2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg504u.unity3d",
+      "sha256": "91b383da6d11a7872176acb3de727680e7803fb853f245e94ac4cfe99d8b1f34",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg505u.unity3d",
+      "sha256": "7d2521ef7f56a86e6667d68b7ea6bb90d0127d1e156c368ddc8d229c7f81d32e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg506u.unity3d",
+      "sha256": "1e9c99f3a980c5be655cabffe1d6f12b6c70d8cc541e5811cde16e3610bbc4c8",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg50au.unity3d",
+      "sha256": "6075b91edd3b0928936157b845985e68d89be306439206b4b1e7c967ac9fbf37",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg50bu.unity3d",
+      "sha256": "c03842764d80da514c9f59b270c38f495e2582ff9823fee977e4f1b47f68c96b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg50du.unity3d",
+      "sha256": "e1a55b5d3d140226efe5fbef42a259601032234af0c849ca56cb2c3e79e03b7a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg50eu.unity3d",
+      "sha256": "58f0ab65f738fd18572550d9f5b9c49ecec5af348986530a9825c181ffc4f5e5",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg50fu.unity3d",
+      "sha256": "73f90c3a08db9bd48e4dcccb1733a360d3dc0d9e9101f517421689330d1d3e2d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg518u.unity3d",
+      "sha256": "271431b74c37ea5c3d3630fae1086edf2b0d354b576169a42a0b852511ced0a0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg53au.unity3d",
+      "sha256": "1717fd797b756bad72c9a1b26c659bae1499b953dddbffd2853411950a74822e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg53bu.unity3d",
+      "sha256": "3c52e663539bc40729c74e499498e75427eeb6246bbab09c2dc8e182b0ed4781",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg53cu.unity3d",
+      "sha256": "fb9709352a7de0770289d141163def57900bf1b6ed427f3fd105e5b458a98332",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg53du.unity3d",
+      "sha256": "7d044559797999e4e1e8bc7337dbe5f65a85a55e023631e5a10780406975ded7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg53e.unity3d",
+      "sha256": "375396e6a97352bb62888a5d05d1cfd7e91c270759f82a9426985d4fcafd5bba",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg584u.unity3d",
+      "sha256": "5d02c0bc79c7c87a2b3e70fb533e34b19b381df53ea0c25cbf72efc54ad802f2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/bg606u.unity3d",
+      "sha256": "c15826a87e6e428354d8af877750f6a02a17f5916d56824b259b3a63803ae923",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/copygs3.unity3d",
+      "sha256": "3f83f12ea2dd2232313cb5797bc90fb3c29022a8f67f6250497cc2546c8e5c7d",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/ita001u.unity3d",
+      "sha256": "5866a97ea503b3b5ee8534a79e7c4839a0e64621c334cb039f8683167ecc23a3",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/spr40402.unity3d",
+      "sha256": "53b63ad4a9628e247f430bb1aaea8f93c3016d826aec2bcdee6f8961d49b9a7b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/spr40403.unity3d",
+      "sha256": "251b5da2c047a4c21c788fa64b2be4189fdf224d55b4adebcb8fa2c6c1036893",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/spr40404.unity3d",
+      "sha256": "f2e7c51f169b6ea473d934e8c94c69f6f2237b4c3d6d1c37452813649f278e87",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/title_textgs3u.unity3d",
+      "sha256": "2b700cd8a0ea9dc8daee8dee09990c300b0b29c45f57f018b0694e214f8efc89",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/BG/titlegs3u.unity3d",
+      "sha256": "69ea48a1046fc809797ca4c77e7d52287bb861b7fdf93fd1dcd8281f9db80fe5",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Characters/animationset_pl2c00.unity3d",
+      "sha256": "ddf941f31ae8552c8c6401d497aa8cf6c540d47a10ef0ef0c434e26c2b345107",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Characters/animationset_pl2c01.unity3d",
+      "sha256": "1464787d2aa3a7b6e5c42fe967d16936805f0116d0258cf3e5affc3bb559e301",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Characters/animationset_pl2c02.unity3d",
+      "sha256": "185908a3dc76d9e059de38d92f0796ab028f7c7100f48383834024abe508b8ae",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Characters/animationset_pl2d00.unity3d",
+      "sha256": "b7daccd57f9b420262afe6f8afb2dbd7acd3ceaffa08e591db93fba1dd6a7ff6",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Characters/animationset_pl2d01.unity3d",
+      "sha256": "6409d37316afb363422726f08458af3142c56f719cdd7a96e4480c232a357121",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Characters/animationset_pl2d03.unity3d",
+      "sha256": "6bba665ebed5e502a93e22b4f6e68a3b808e1b075d1f9059b2a31d299131f27c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Etcs/animationset_etc002au.unity3d",
+      "sha256": "c32bfa9053742b7cac7849909ea116875500aec10a961320c8a6b46390e466d8",
+      "animation_fields": [
+        {
+          "name": "etc002eu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002cu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002au_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Etcs/animationset_etc002bu.unity3d",
+      "sha256": "851be4cee8696c5856199b9d264e7ec1129f039a76e0ab1cfb85007dc128f802",
+      "animation_fields": [
+        {
+          "name": "etc002du_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002bu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc002fu_3ds",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Etcs/animationset_etc019u.unity3d",
+      "sha256": "a4b9cd96e2823b660978389b36a655c06571512cc23ff1e1d08f0aa5fb850ef6",
+      "animation_fields": [
+        {
+          "name": "etc019au",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc019cu",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        },
+        {
+          "name": "etc019bu",
+          "fields": [
+            "sequences",
+            "sprite_groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Ita/animationset_ita001u.unity3d",
+      "sha256": "63785cf4097b1c056f50385cdbe5c2e14d17147763b1d2c4c955c8b08a27fd45",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Itb/animationset_itb00bu.unity3d",
+      "sha256": "5ebd8d45ead28e98fbc7a8f734cd5bd9a91eabc34232d5e9e673b9efda7a38f2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Sprites/animationset_spr104u.unity3d",
+      "sha256": "92733b48400c601adb082a918e4e1c106f5992d4870a72b785c4e01fa48ac8fd",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/TextureAnmRelations/Sprites/animationset_spr404u.unity3d",
+      "sha256": "4217a2e690d18472c572bc49506ac5fcd166968cd2b540390de4243dee381510",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/etc/frame02u.unity3d",
+      "sha256": "0d7c24ca415b5411d8943f09d42454fbc37725bd0491c598e93b2a291c37002b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it006u.unity3d",
+      "sha256": "8dbbbc46e32971022797998438bd255e58fee3e93f8f208b33a64284df86f8f2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it012u.unity3d",
+      "sha256": "b7a28d2798ea7e4280685cf0d1aaddc09de6375c9c74a1350d93e001c7c89fbd",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it018.unity3d",
+      "sha256": "3b396febcc9d0328fff504a00fb112a526dccf50a9e8324ba799d04156f1dc12",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it01cu.unity3d",
+      "sha256": "473c8e97299b7688e4bce689c78038891f1b37485146507c9e056a6397a8e84e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it034u.unity3d",
+      "sha256": "7c0a3b7cc5cb3df633b039752130572af3c691e6f755dde3d9df135e360ea745",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it035u.unity3d",
+      "sha256": "b03282e5dbe1f1c6bc38a5fa1371745520a143a641882034f7acc438903423c0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it03fu.unity3d",
+      "sha256": "1ce1af52509dc90de75756f7ca700a565064e4ba0758158e7246088521817182",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it051u.unity3d",
+      "sha256": "942dafaa41db3348182481c78511497269467e7c8b890a5a0411acb9897cdb39",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it072u.unity3d",
+      "sha256": "24ce4165ee18ab4eabb27875e36432c18d6fe14be3d4538c49269caa198d371e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it074u.unity3d",
+      "sha256": "118db62265cb301d6da39a5fc1b81ce8d2da464366c2e67ec565d3b0b07c0345",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/it078u.unity3d",
+      "sha256": "2f6063a11fc68095015f906c22351f763c20099a391c4f50f3f46de7684613a9",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc006u.unity3d",
+      "sha256": "c4886fb4f83e15b25ee03ae6e062e59a2ab4e6acb44b0c530a020430140824a0",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc012u.unity3d",
+      "sha256": "30dd12fbacabe28430f814aa477a9bea3ecede77a6062a2b7813f4de2c33e511",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc018.unity3d",
+      "sha256": "36a6d4610425efb642625b80788f55a23fa43827f872ded0194be0d56af84a08",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc01cu.unity3d",
+      "sha256": "100bbd2890f0386490da420255a590f4ed5830393f09f48db3061b55a48c38a3",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc034u.unity3d",
+      "sha256": "d3f9f62d88bd11d52cade2e7af18a6f452652e7e9287a22be9d6e1a51f2ef199",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc035u.unity3d",
+      "sha256": "71dbcebced99502f724a1df20ea2b6eec5f0d5da4029289b4056c7a177ff68ff",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc03fu.unity3d",
+      "sha256": "92ea711afdc4b0b7ecb81206f5b61cfc87bdbc0df0574c82824f4644aff19776",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc051u.unity3d",
+      "sha256": "19f2652a6f7a2bb58ca2e5f7aba40c580727ba0eaba69fcc78b468050c64eb2f",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc072u.unity3d",
+      "sha256": "1718d22ebfd70799dc6aeec86419fdc878136d25fce40f92c77cd085a7802ab7",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc074u.unity3d",
+      "sha256": "3b9afa628c55dc971b32dc76d063a56a686b68c51a16b4c23d9c9d92352a12fa",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/icon/itc078u.unity3d",
+      "sha256": "0641ea3251289bc6bbd880059838203d83ffccbd7adf735f2ec80d7f81c3020a",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/itb/itb000u.unity3d",
+      "sha256": "2bab5c7f9cca728b3cd3f1c08d21eceb5f5711ba5218024a7caea614c1a811b8",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/itb/itb001u.unity3d",
+      "sha256": "3f4f0636ac4229bb164b375b492031c1a8c5ad6584cf0a539502dbf2b0e830ca",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/itb/itb005u.unity3d",
+      "sha256": "5f1b1dd8ba4935d39ddb1bff2f832d7a5b54d046804b66006d3c7179b569b1d2",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb03u.unity3d",
+      "sha256": "ddf15129c764d2cf677e0ceaf6b0d39055ef7f29b401a1dfc25b303367a8cee6",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb04u.unity3d",
+      "sha256": "36ff9f8c56d0f790f34b7d31ccbf4911bc33af96896723aa38d5a6b4a00bda18",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb05u.unity3d",
+      "sha256": "c56ca87c744f6841d1bfdd724367f025772f14f39f38904d525989a76979139e",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb06u.unity3d",
+      "sha256": "64ab472671e76a9a334e0f7983e3daae544b4c7fcad7810fc7fcf5deae97d18b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb08u.unity3d",
+      "sha256": "5e317fa716304a53b66d77226185cb0091059e22c8139ee264f6402e2d4fb39b",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb11u.unity3d",
+      "sha256": "ac4dc035fda467948ba609a0ca09381b55365f2341fd8de6c799fefd886d6aee",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb12u.unity3d",
+      "sha256": "8f1a3d1eef4d1e6435a5a89292d67b1dc524fdbb661a0c696bf1aed21527cf33",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb17u.unity3d",
+      "sha256": "5666571728ad40d7035b62e2cac1a6cf3c113f9e57d94a08bdd549b7be3b6ca4",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb21u.unity3d",
+      "sha256": "a4835a7b09117f45f3789deadeaf596d2d21fe38c87016cdc5dec77ec70eae63",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb22u.unity3d",
+      "sha256": "933051c5626e4aa3dcc03be126800c5e052bc8992b7a4e6310ecc7238d45bf87",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb26u.unity3d",
+      "sha256": "7ff3e61d39bca19ce3b32a1c6602461e00f9517c034277c7d2dddbac8f4e0cdd",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb27u.unity3d",
+      "sha256": "89c5507f84dbd9ebdea1778f21fa7b167776fa6c0ac28f1f801dac449baf0b94",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb28u.unity3d",
+      "sha256": "134bdb218e3b390170a04716b1db35380787faf61b4082eef9e3b18bd636873c",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb33u.unity3d",
+      "sha256": "35ec0559f2afe6fc401ec5954ac094a06e7ebdffcd6c1842982295d6a5ccba08",
+      "animation_fields": []
+    },
+    {
+      "path": "GS3/thumb/thumb34u.unity3d",
+      "sha256": "ef78000d4e5378f45789fdd49f16e6769a2f8755b9b7ea2757d7fdd6181175e7",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/ActionStudio/actioneditor_bg_thumb_1_u.unity3d",
+      "sha256": "81d74c2d3c1eb168508382387083a2458d54ec2004d287ba32a675c4d1d1b940",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/ActionStudio/actioneditor_bg_thumb_2_u.unity3d",
+      "sha256": "1911a0a17da0366016efa805e3a43e683cc1661416f10bc226b30d4f3c37433c",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/ActionStudio/actioneditor_bg_thumb_3_u.unity3d",
+      "sha256": "35a4683cbabb6618459714354c9f904b03601688276747273cdaf60b6b9dc550",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/ActionStudio/actioneditor_bigfont_u.unity3d",
+      "sha256": "00c964c854a13c1d5acc323797a29555c51c799e3501c0a5c8bc218d198ce957",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/ActionStudio/actioneditor_clapperboard_u.unity3d",
+      "sha256": "8296589ab9332a2fc731134b0f47aea0b57608acdc53487a7023cb88d7388456",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/ActionStudioSelector/actionstudioselector_clapperboard_logo_u.unity3d",
+      "sha256": "3633caa8c5c8963bb094775511a8fbb65cc89aa2a36c2f6b5d9cfb73dc3b1154",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/ActionStudioSelector/actionstudioselector_clapperboard_text_u.unity3d",
+      "sha256": "d272f96fd62fe1a538357a489edb1663aea37d5f20dda65e56499017dd72c357",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Artfile/art/visual064.unity3d",
+      "sha256": "29e5f2ec1b29c2f446c8672ef625c6032a0cb6f07d861866e9a9bddf7758d464",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Artfile/menu/artfile_titletextu.unity3d",
+      "sha256": "52c899caf85c01e641c80a7f62c0aafa00a7d521f8fad1a5e7dd78a0ef5fa730",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Artfile/thumb/thumb_visual064.unity3d",
+      "sha256": "ddd2faff470ae48ba3d2910122531fdb0632488c0ccee0dd113b2cd1d097e977",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Orchestra/musicplayer_icon_bgm_u.unity3d",
+      "sha256": "5789379ed7b1fd5f67b930bf1ad09ed94e574b81c84c9d9e1feed9bfd9f01857",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Orchestra/musicplayer_player_all_repeat_u.unity3d",
+      "sha256": "a7f33fe82d624dfe563e798b675460c882bd2c93f6da6e005c12c764432283a7",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Orchestra/musicplayer_player_all_shuffle_u.unity3d",
+      "sha256": "762616760e6552cc493d8d0ebec7664f62ddb11ab56c4faaf8324d8890a9950a",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Orchestra/musicplayer_player_bgmsetting_u.unity3d",
+      "sha256": "e7a948d81d0edf4cc18de399095a350658ae135ab01c327046015e7fea175bfa",
+      "animation_fields": []
+    },
+    {
+      "path": "Gallery/Selector/gallerytop_thumb.unity3d",
+      "sha256": "3ee8b57558b9845849ac96da26b75f628480a7e6c58a8a036312e684a2d17b3a",
+      "animation_fields": []
+    },
+    {
+      "path": "menu/common/court_record_02_xboxu.unity3d",
+      "sha256": "8af99074733e4039de39e630d4f51619887afccc415c1676a890268e442b3150",
+      "animation_fields": []
+    },
+    {
+      "path": "menu/common/recordu.unity3d",
+      "sha256": "be0a06a7086946a1a4535d35028fd769695765111df63b0430fb499fee450919",
+      "animation_fields": []
+    },
+    {
+      "path": "menu/common/testimonyu.unity3d",
+      "sha256": "a17c659344e5d91104b06dd07334822999d0b5a1ae9e52e7c30ba807a47ebf38",
+      "animation_fields": []
+    },
+    {
+      "path": "menu/title/copy.unity3d",
+      "sha256": "f406701d4c02193eaaa53c8274beb65927f0b165e33e1f311d74055e906d18cf",
+      "animation_fields": []
+    },
+    {
+      "path": "menu/title/titleu.unity3d",
+      "sha256": "4d26eaca2653fdb1d4a5ed56c82b65f981420e9bace3074186adf9a49c2ded63",
+      "animation_fields": []
+    },
+    {
+      "path": "GS1/scenario/actionEditor_u.mdt",
+      "sha256": "08939fb56dafc05dc2b8402b8c855afba51bd654a812b06219a54b23325d52b2"
+    },
+    {
+      "path": "GS1/scenario/ev0_mes_u.mdt",
+      "sha256": "e774213af0277b79a2219a7657aad4fbd4bcf3317da1a9fabab241fc0ec9b87a"
+    },
+    {
+      "path": "GS1/scenario/gs1_ba_u.bin",
+      "sha256": "0ed7317e35ca6b21dd9507570208986b8e4c7b7ed32a22cee5fda4940c9fbe68"
+    },
+    {
+      "path": "GS1/scenario/gs1_nolb_u.bin",
+      "sha256": "b18e651283036f6d2db4bf2de0659a33041f1af5ca90d931197e2868e017db37"
+    },
+    {
+      "path": "GS1/scenario/gs1_note_u.bin",
+      "sha256": "e14c5a0ae00e00a72ced30ced58ccf605f1795dacb8b604bb86e67ce9a86ab90"
+    },
+    {
+      "path": "GS1/scenario/gs1_sel_u.bin",
+      "sha256": "0d64182845a1200203e6d79edeea262421fe86ff08d790bbb153d051a02a10c6"
+    },
+    {
+      "path": "GS1/scenario/gs1_u.cho",
+      "sha256": "c17f2b951c7caeca9fff1959ded45e84d3db979983034323ede9321ca5501074"
+    },
+    {
+      "path": "GS1/scenario/sc0_text_u.mdt",
+      "sha256": "6850ff09fbce1482508967613bc35c758bd02ef9d344b63f2d21b9440dc8b9b4"
+    },
+    {
+      "path": "GS1/scenario/sc1_0_text_u.mdt",
+      "sha256": "3feceeca0f60a0c233b71ff94140bca081e0ecc3f33d5167a0f8f178e56d2a07"
+    },
+    {
+      "path": "GS1/scenario/sc1_1_text_u.mdt",
+      "sha256": "b42b580bd0fa9325244bc00cf55ec3cfbe5c7cca765584c731013289ac786e29"
+    },
+    {
+      "path": "GS1/scenario/sc1_2_text_u.mdt",
+      "sha256": "54cfdaa49c4cc38d9ba85a357d708aa012704054d87ef483527082e159f52f6f"
+    },
+    {
+      "path": "GS1/scenario/sc1_3_text_u.mdt",
+      "sha256": "278626d26cbd412611cc91cadae8611a3af30138039e3f0701598049ce38abf4"
+    },
+    {
+      "path": "GS1/scenario/sc2_0_text_u.mdt",
+      "sha256": "561ef2ab445a353d35feb7cf24f2efc9a1f30e9ee3a2c2c14c64437624ff429c"
+    },
+    {
+      "path": "GS1/scenario/sc2_1_text_u.mdt",
+      "sha256": "a042e099b24e03575c0a788df0f8a079c06ba43a055e04ed38aa5d6d494ad4b3"
+    },
+    {
+      "path": "GS1/scenario/sc2_2_text_u.mdt",
+      "sha256": "1aa747fea89c85601d86d97bbe1cbc3e3474039702414c5a4c16dd94d7ea79e2"
+    },
+    {
+      "path": "GS1/scenario/sc2_3_text_u.mdt",
+      "sha256": "bf97c8e626ee55d705b87eabc699e9446d971c2b230ad71cb2bd93634e89c632"
+    },
+    {
+      "path": "GS1/scenario/sc2_4_text_u.mdt",
+      "sha256": "f5f3828419943c55e62e07f8db48731e6bacf2161005ce0ea9f75a0748890d24"
+    },
+    {
+      "path": "GS1/scenario/sc2_5_text_u.mdt",
+      "sha256": "e911802f2f924279382cff7329186626ea06ff23b799547f029070fa5883a6ed"
+    },
+    {
+      "path": "GS1/scenario/sc3_0_text_u.mdt",
+      "sha256": "ba2e42ee53e52c21ea450e376a748192c372a8eb701aa08f3c6845491e52f485"
+    },
+    {
+      "path": "GS1/scenario/sc3_1_text_u.mdt",
+      "sha256": "42d40f5c9c4065707dbdc84597925f464fb1d08128d5aa405150f2919027e02a"
+    },
+    {
+      "path": "GS1/scenario/sc3_2_text_u.mdt",
+      "sha256": "97f401b3f7e90562ca06c3dd018cbf41a1f14ebaaad09f9885b29c5436d6a4f6"
+    },
+    {
+      "path": "GS1/scenario/sc3_3_text_u.mdt",
+      "sha256": "e60e7e4118faee86438bdfa1fd7532b421c7c37d8b9582dce9d78faf0d92727d"
+    },
+    {
+      "path": "GS1/scenario/sc3_4_text_u.mdt",
+      "sha256": "e76243ac8e7b3264f1b95e3be495b773d5c637a9f6008cd04e3b55c83dce1291"
+    },
+    {
+      "path": "GS1/scenario/sc3_5_text_u.mdt",
+      "sha256": "53d6f8ba3f1b6bae5f45409973a5f79f13eeefbe214e7e21ab2ed673ad57e03c"
+    },
+    {
+      "path": "GS1/scenario/sc4_0a_text_u.mdt",
+      "sha256": "f98c7469a1302f6fd1902f845550d4df9a0f58bdf8b894076feb1a79cf4b9f51"
+    },
+    {
+      "path": "GS1/scenario/sc4_0b_text_u.mdt",
+      "sha256": "b18f07147efbe61302926ee4c86ce7a39c835e72219627153e6a46bcfcbf056b"
+    },
+    {
+      "path": "GS1/scenario/sc4_1a_text_u.mdt",
+      "sha256": "4c8cf09a99e344b3a531a20fcdbbbc8de87a3b10965bfe51b14bcf8d658b9b6c"
+    },
+    {
+      "path": "GS1/scenario/sc4_1b_text_u.mdt",
+      "sha256": "44f7615fc3dd1cb41c84bbc3f94d34a35ee02407333f20b930e41ef65f697e86"
+    },
+    {
+      "path": "GS1/scenario/sc4_1c_text_u.mdt",
+      "sha256": "42815545a703b458fce0b80267076c30bfd903c937f934097a58ff926147f484"
+    },
+    {
+      "path": "GS1/scenario/sc4_2a_text_u.mdt",
+      "sha256": "6d78559ad4aa261a2d317d02569d3599c466df8dc57fe94a2e21f53967d78674"
+    },
+    {
+      "path": "GS1/scenario/sc4_2b_text_u.mdt",
+      "sha256": "4bd5f73140cf74fc1fb5f0b264281659cfa9d752d732359c2e0d36f6ea843882"
+    },
+    {
+      "path": "GS1/scenario/sc4_2c_text_u.mdt",
+      "sha256": "9e7246d1e39684dec311f112b43d50a3a9dce7cd8d0a309e86edea12330ffc24"
+    },
+    {
+      "path": "GS1/scenario/sc4_3a_text_u.mdt",
+      "sha256": "6d132a8773772a8279c461850242995ff88c281b234a30e030e1540499554dff"
+    },
+    {
+      "path": "GS1/scenario/sc4_3b_text_u.mdt",
+      "sha256": "2e03ce15794ca7fdbe7eb25a1cbaae0aa4582037e2e0880a4d3b9e471d6613ec"
+    },
+    {
+      "path": "GS1/scenario/sc4_3c_text_u.mdt",
+      "sha256": "3cdd9150d3deee0fc9ce5832f67bffe24f58aa7ce20d95a275e6bd486a43cf59"
+    },
+    {
+      "path": "GS1/scenario/sc4_4a_text_u.mdt",
+      "sha256": "42fc00000706f4b265c60e38122a1a8b46ac5a9d9d4dde940bc8cf8d64e64005"
+    },
+    {
+      "path": "GS1/scenario/sc4_4b_text_u.mdt",
+      "sha256": "9700e6d0f43ecc81f74615a9741af0a75db4fa8c091799b20a5aa51f0ca05415"
+    },
+    {
+      "path": "GS1/scenario/sc4_4c_text_u.mdt",
+      "sha256": "dd1896ef85ce97ba8f33b7f3bfa9af6317dd46812b89a9455d69d72ddae1690f"
+    },
+    {
+      "path": "GS1/scenario/sc4_5a_text_u.mdt",
+      "sha256": "60f191422a611ccd589ebb57ef5b08bffc1bd0b5bf37f81404eb54e5a1bfb903"
+    },
+    {
+      "path": "GS1/scenario/sc4_5b_text_u.mdt",
+      "sha256": "cf06903b1508757d61e9e9acf38286b374059e303a940a04c7256f176c6f2080"
+    },
+    {
+      "path": "GS1/scenario/sc4_5c_text_u.mdt",
+      "sha256": "2e7bf99dee6aa85a01f4e5be0d787bcbcd95e8c2715f83cc9e32111c0366892b"
+    },
+    {
+      "path": "GS1/scenario/sc4_5d_text_u.mdt",
+      "sha256": "8c3b12048ef95531cf0b9e945d47344a069e36fd9ad5ecb9198204b6a6d3eaf2"
+    },
+    {
+      "path": "GS1/scenario/sys_mes_u.mdt",
+      "sha256": "88f80a3c3a460564ac0a2124e76750efd48425e2bd65fd23dd41cb3f272819c2"
+    },
+    {
+      "path": "GS2/scenario/actionEditor_u.mdt",
+      "sha256": "6401f0c06648faee2df3d4b80641122f90677d0c14d2381e4d249a064544a65f"
+    },
+    {
+      "path": "GS2/scenario/gs2_ba_u.bin",
+      "sha256": "80cf315dcd6857d79f94c5ff5e3c2ac079669ea1ccc926f52125468d825bb5dc"
+    },
+    {
+      "path": "GS2/scenario/gs2_nolb_u.bin",
+      "sha256": "bd09fe214c2b5de4572e50f9ad75c35211c0bb94b6bda855b4114a4671d80645"
+    },
+    {
+      "path": "GS2/scenario/gs2_note_u.bin",
+      "sha256": "a1c3a39bc1fa84ad9c1bd8b45c76f1a9b60026c77e7834744cddb3b49f9be704"
+    },
+    {
+      "path": "GS2/scenario/gs2_sel_u.bin",
+      "sha256": "3992d29258dec71c8fb3b49952e9591e2bda4a0ae5aaa2e349aabf575aa6f656"
+    },
+    {
+      "path": "GS2/scenario/gs2_u.cho",
+      "sha256": "f8f779cb67d6909b3879e067e1ec35a3f19584c423587ac01dde0eca5cbb6838"
+    },
+    {
+      "path": "GS2/scenario/sc0_0_text_u.mdt",
+      "sha256": "e0882426f91891d3d9a38a3bddaf9642f9513dc40cee74f8875149d2c6dbde0d"
+    },
+    {
+      "path": "GS2/scenario/sc0_1_text_u.mdt",
+      "sha256": "c2b33eb003925d26aea6609fa5f1ed5c59243e8d8efb92d07ea6099f3baa5765"
+    },
+    {
+      "path": "GS2/scenario/sc1_0_text_u.mdt",
+      "sha256": "52d3060e98744f232a84161b976ab39815ca60d212567ca342ae23190d640ce1"
+    },
+    {
+      "path": "GS2/scenario/sc1_1_0_text_u.mdt",
+      "sha256": "c2ac51040485a7ea46f0c55bdfc7d67276153e07174499f70f0f1a03c9b6682a"
+    },
+    {
+      "path": "GS2/scenario/sc1_1_1_text_u.mdt",
+      "sha256": "ad162f34f6df2dd667d42bb1e24a86671a7c43400c1e0f4178c9473ab7591e43"
+    },
+    {
+      "path": "GS2/scenario/sc1_2_text_u.mdt",
+      "sha256": "b487fa9619f9416a9fa7a5f99f23b57d334aa644fe7bc54567771b81f5c308b5"
+    },
+    {
+      "path": "GS2/scenario/sc1_3_0_text_u.mdt",
+      "sha256": "917bf855bb5048e380bc136dfd063078cdc4db0b0c867a204a357d8a9a2eb358"
+    },
+    {
+      "path": "GS2/scenario/sc1_3_1_text_u.mdt",
+      "sha256": "3c7d231caa81763e569894badc172e66a7c3c141c324d63cae954a18d794ca38"
+    },
+    {
+      "path": "GS2/scenario/sc2_0_text_u.mdt",
+      "sha256": "d7b027a8dd7408e41d00e7eee214a20754e2b96f3143a972cd7fde86f13f016c"
+    },
+    {
+      "path": "GS2/scenario/sc2_1_0_text_u.mdt",
+      "sha256": "0adbe264831dc163b4632006fecc8773c1496021221c2a19d3fdbfbf5786e7dd"
+    },
+    {
+      "path": "GS2/scenario/sc2_1_1_text_u.mdt",
+      "sha256": "97be7e7524154201bf2e7fa88d3ca63cd9cd44ef7b557e1d0dccf1fb1287c4d9"
+    },
+    {
+      "path": "GS2/scenario/sc2_2_text_u.mdt",
+      "sha256": "e65fe39123f2a7f579ea87b1478525a276c75da0c9cbfa39cf29826429c1aefb"
+    },
+    {
+      "path": "GS2/scenario/sc2_3_0_text_u.mdt",
+      "sha256": "f34beddde56069a3d67394bc546d506c99024cdca7085afc8d3e29d7d37f15ad"
+    },
+    {
+      "path": "GS2/scenario/sc2_3_1_text_u.mdt",
+      "sha256": "7fbd2e540a2e3ba9738fa6a0ae4de8ef1daf6eb4a7eec41ec37bae5fa79d4bb4"
+    },
+    {
+      "path": "GS2/scenario/sc3_0_0_text_u.mdt",
+      "sha256": "8d5857d908056a815c7976be677c9893df966a7adba7d9c3cc16bd9939980ca3"
+    },
+    {
+      "path": "GS2/scenario/sc3_0_1_text_u.mdt",
+      "sha256": "19022c89b39851ca5288dc9cfddded7a2527778597ea57faa8bf77593c200160"
+    },
+    {
+      "path": "GS2/scenario/sc3_1_0_text_u.mdt",
+      "sha256": "1b8c462768c4ebb854a15f67c0e9c13956cfd9b1e690dbfbc320bbda8c398249"
+    },
+    {
+      "path": "GS2/scenario/sc3_1_1_text_u.mdt",
+      "sha256": "645e43ef8c5688f0ab79b2795822818a823fc4243101c0b7a9593b1034afdbe8"
+    },
+    {
+      "path": "GS2/scenario/sc3_2_0_text_u.mdt",
+      "sha256": "ee178761dcf7fabda818512d3c6c7fe0710f09c8e8549d767fdc14ffaca0118a"
+    },
+    {
+      "path": "GS2/scenario/sc3_2_1_text_u.mdt",
+      "sha256": "abc13dc3854502cd0c54925fd2a498f238d8a877c1cffaae11dcca6a859b1bde"
+    },
+    {
+      "path": "GS2/scenario/sc3_3_0_text_u.mdt",
+      "sha256": "7b2033eccf9062b2128acf97aad85f611d90daf08bada7e6bbba397de169a811"
+    },
+    {
+      "path": "GS2/scenario/sc3_3_1_text_u.mdt",
+      "sha256": "d61b8fca24898a54cb7731d958c79a0eec6480a0d308db175000d27bd983620f"
+    },
+    {
+      "path": "GS2/scenario/sys_mes_u.mdt",
+      "sha256": "8ba57cd9ea8d1465434544b40ff961df8a8a250efda943c675b3aec859607218"
+    },
+    {
+      "path": "GS3/scenario/actionEditor_u.mdt",
+      "sha256": "376b50fa4b50a5fe4aefdec992f2ddd1a93ba37c538837da6dccd21f0c201f1f"
+    },
+    {
+      "path": "GS3/scenario/gs3_ba_u.bin",
+      "sha256": "829c13154ff7707e02dfd1d7e1b60a69d12efffebe1b74c114c823f497fc8d10"
+    },
+    {
+      "path": "GS3/scenario/gs3_nolb_u.bin",
+      "sha256": "8de4744fd8bc3cd49e64d143e52fa763324ecf5d44251cbc755aa2c3d7fc3859"
+    },
+    {
+      "path": "GS3/scenario/gs3_note_u.bin",
+      "sha256": "08fee91452ffa08c12930234ee8f48cdee8597f3d9033c665419ab1e6fd29c62"
+    },
+    {
+      "path": "GS3/scenario/gs3_sel_u.bin",
+      "sha256": "9eda4f55297ae41605d3beb95762acb82204d30737f8cead31492caba2503e55"
+    },
+    {
+      "path": "GS3/scenario/gs3_u.cho",
+      "sha256": "2be814d116c71eadde72c3a43e6ed75e785056e7893e16687c4e737844d45058"
+    },
+    {
+      "path": "GS3/scenario/sc0_0_text_u.mdt",
+      "sha256": "e0b42258de99186a82371b6525bb8973c8d11c725abd9bae4919ccc65729ac9e"
+    },
+    {
+      "path": "GS3/scenario/sc0_1_text_u.mdt",
+      "sha256": "e807a34ac49f4748a6cdebef09d233f5df6e57f71e88c6503499ec88814e2610"
+    },
+    {
+      "path": "GS3/scenario/sc0_1b_text_u.mdt",
+      "sha256": "461ab12103fde3156cb8d0c252d2869bad14c40e303ec2671ea350ed6f174fbc"
+    },
+    {
+      "path": "GS3/scenario/sc1_0_text_u.mdt",
+      "sha256": "e30adc7112c9d464017973f4e5988d993ef6fa3ee6181541486058eb196f90f5"
+    },
+    {
+      "path": "GS3/scenario/sc1_0b_text_u.mdt",
+      "sha256": "e14656e0f1ac74cc90ca1c0a0d392f3b9ab532ed64702b7540223588cbc6669d"
+    },
+    {
+      "path": "GS3/scenario/sc1_1_text_u.mdt",
+      "sha256": "c284dd85115d01d62635fe0cfe7dcb77a13eb353ac41bc310ec60ba29b246866"
+    },
+    {
+      "path": "GS3/scenario/sc1_1b_text_u.mdt",
+      "sha256": "35fc49eeb935dcc45cca81029e4a433ad32f2fe257130a7871966da726bb22c6"
+    },
+    {
+      "path": "GS3/scenario/sc1_2_text_u.mdt",
+      "sha256": "3e95455d9a71e896e64ea061efee2440cdfe021d9660426cab0582b3a4186976"
+    },
+    {
+      "path": "GS3/scenario/sc1_2b_text_u.mdt",
+      "sha256": "5ed1d5ecba3bd0ac2a36f6878fc361f81209a2d94cb664cd58d325c79573edae"
+    },
+    {
+      "path": "GS3/scenario/sc1_2c_text_u.mdt",
+      "sha256": "4fef36b699e4ee364fd7fd4818817e1f9f75634abf172d2fe1b73e401bbbc2bf"
+    },
+    {
+      "path": "GS3/scenario/sc1_3_0_text_u.mdt",
+      "sha256": "9e67039bfab9a4247891029700aeeeb3f5125fbdfc7fa29666351105b629b8d5"
+    },
+    {
+      "path": "GS3/scenario/sc1_3_1_text_u.mdt",
+      "sha256": "b11daa6df126b6ced2dac5f9d309ee1bd5949117ac63e3b3e68229e16b7672bd"
+    },
+    {
+      "path": "GS3/scenario/sc1_3_1b_text_u.mdt",
+      "sha256": "f0ee19bfa48a36aed939b5c3c3c7c381a952d5d0fec28ac312f0c39614f1ce9b"
+    },
+    {
+      "path": "GS3/scenario/sc2_0_text_u.mdt",
+      "sha256": "a9fb5bb7f674b8ae307fb0033ee2226f2a9d664776a260f9ca3e9fde739b5e25"
+    },
+    {
+      "path": "GS3/scenario/sc2_0b_text_u.mdt",
+      "sha256": "687e0211787104b636b5c614811ee73a8551d9556c522e7c0911da5c81ecad8e"
+    },
+    {
+      "path": "GS3/scenario/sc2_1_text_u.mdt",
+      "sha256": "970743ff116030d714f7dada559801ca2fd1082c14df27350d3dafbc1c51ae9e"
+    },
+    {
+      "path": "GS3/scenario/sc2_1b_text_u.mdt",
+      "sha256": "71a677f9672675eb38cb118f05451402b92b607f236d54fe7887245da9b675e3"
+    },
+    {
+      "path": "GS3/scenario/sc2_2_text_u.mdt",
+      "sha256": "afafed77918fb405dc29d167b0d065426f0ae7a8a317db2710afd4c4bd902f3d"
+    },
+    {
+      "path": "GS3/scenario/sc2_2b_text_u.mdt",
+      "sha256": "aad5bf26ca1278ec4da07d52dac96df4477b9568b47edbf6bb9905229a571e59"
+    },
+    {
+      "path": "GS3/scenario/sc2_2c_text_u.mdt",
+      "sha256": "666852c2091b7249323ee3352c8607a6c53a076fd570907f613984ecd75dd1d8"
+    },
+    {
+      "path": "GS3/scenario/sc2_3_0_text_u.mdt",
+      "sha256": "4af4399a57a508ed0923d3db7ccb72a21def85cd35f73938da45d9813a8e7e96"
+    },
+    {
+      "path": "GS3/scenario/sc2_3_1_text_u.mdt",
+      "sha256": "4e79de55b3aaeebd2231a66d12638f7d26557cfe9eb1051d6d5f94007776bb89"
+    },
+    {
+      "path": "GS3/scenario/sc2_3_1b_text_u.mdt",
+      "sha256": "837e85f8a76c7367cca04a2049f1f8e6575c148f330f1f77c0f60699634db0e8"
+    },
+    {
+      "path": "GS3/scenario/sc3_0_0_text_u.mdt",
+      "sha256": "ad64fe523c86132acbd70156a2234894b998c719374b48bc298674cd9cb6e517"
+    },
+    {
+      "path": "GS3/scenario/sc3_0_0b_text_u.mdt",
+      "sha256": "593dbcf5530f4bc2cc50a484816dfe408c60ee8632fdf096d232b0d28b275179"
+    },
+    {
+      "path": "GS3/scenario/sc3_0_1_text_u.mdt",
+      "sha256": "8db1a23467d2c99a2424be8194fcf6b18e4628aaefc00135b14b0f900923bb2e"
+    },
+    {
+      "path": "GS3/scenario/sc3_0_1b_text_u.mdt",
+      "sha256": "d3e3c590178d65d274a64f3ae0dc75dce6f68eb1b3fa6c8d54b5cd876a81c9aa"
+    },
+    {
+      "path": "GS3/scenario/sc4_0_0_text_u.mdt",
+      "sha256": "c0b8a2641998e4af598374cef4e92c9e8fead4351e82b8213726f548c739cb49"
+    },
+    {
+      "path": "GS3/scenario/sc4_0_1_text_u.mdt",
+      "sha256": "13e5fecd6f36a2b4f9591cbd6d704f2ec26ed0c1f68f2d80e3d9ed02a7a033e9"
+    },
+    {
+      "path": "GS3/scenario/sc4_0_1b_text_u.mdt",
+      "sha256": "c812f022f908167caeb160bf311343569d18c26a029081d3772ab8fddbe0d8bd"
+    },
+    {
+      "path": "GS3/scenario/sc4_1_0_text_u.mdt",
+      "sha256": "75ceaafddff04dab15eb8b415c00636bc6c6ffd25ae12853266da738e0178e28"
+    },
+    {
+      "path": "GS3/scenario/sc4_1_1_text_u.mdt",
+      "sha256": "a5f48bf8ed4ab57786cbae34f35bd59d2bf9f7feb7cc9a2b3d8dcfc749cca884"
+    },
+    {
+      "path": "GS3/scenario/sc4_2_0_text_u.mdt",
+      "sha256": "a8afb79fd528599d8a08fbf52d570488ce011eb20242cd11df94955e5683df1c"
+    },
+    {
+      "path": "GS3/scenario/sc4_2_0b_text_u.mdt",
+      "sha256": "6f14a43ddfbd5bbc0fb54bd631adbe5444538c9286831797f138ea0255918773"
+    },
+    {
+      "path": "GS3/scenario/sc4_2_1_text_u.mdt",
+      "sha256": "993e9b252c3fc28e22b5d6725486e21a1f8e2dd63d7b2ac643e4098aa7b2461f"
+    },
+    {
+      "path": "GS3/scenario/sc4_2_1b_text_u.mdt",
+      "sha256": "10f172fd993b58dc0b462a3dc82d2b8f55ec70c850826d4c78dc5a37234fe739"
+    },
+    {
+      "path": "GS3/scenario/sc4_3_0_text_u.mdt",
+      "sha256": "0126d27555a3b3514e560247ef69e6881127d31976df20a86c5c98c36626f4a2"
+    },
+    {
+      "path": "GS3/scenario/sc4_3_0b_text_u.mdt",
+      "sha256": "02a75d52c20f2afc7902a0ec1c1700d97f9d116c28a486b0ffcf846a87e19d0a"
+    },
+    {
+      "path": "GS3/scenario/sc4_3_1_text_u.mdt",
+      "sha256": "eb7c591ae5f409630054587cfc3a21eb60b233ba246f0f3efeaf59ae575fffd7"
+    },
+    {
+      "path": "GS3/scenario/sc4_3_2_text_u.mdt",
+      "sha256": "fb4de72430f5dbfcd683a5b827153715c4aef72e6d2d424790a75f027077708a"
+    },
+    {
+      "path": "GS3/scenario/sc4_3_2b_text_u.mdt",
+      "sha256": "38273d942b576a1853d65a3ad04007a3f93dcd0488e514f5cbcdb1a063e275e9"
+    },
+    {
+      "path": "GS3/scenario/sc4_3_2c_text_u.mdt",
+      "sha256": "c0846a6ceec7fd8c11109b2c98e301cec87aa5e5c736b7d1212073458972567f"
+    },
+    {
+      "path": "GS3/scenario/sys_mes_u.mdt",
+      "sha256": "0edc18abd887bc19ecc1a4290a9f0ee35a6bd9b296633d4899ac9a23af40f796"
+    },
+    {
+      "path": "menu/text/chapter_name_gs1_u.bin",
+      "sha256": "816eef00ecd3029e0532fdb6a355c467e2a788b587f21f7713808b587601ec3f"
+    },
+    {
+      "path": "menu/text/chapter_name_gs2_u.bin",
+      "sha256": "decae629e9cfb8617d61e05a7e461656ddaf57e432ed2e291226370ee1712631"
+    },
+    {
+      "path": "menu/text/chapter_name_gs3_u.bin",
+      "sha256": "d5b186a162c08a241e5018c3a9a89868ef462d3e88d5aa1b0895ab8c8b0f1d69"
+    },
+    {
+      "path": "menu/text/common_text_u.bin",
+      "sha256": "dbd85b40d83c493115fa9cc7a4c845233335ea2fe2c4560b4d4da0643b93f01e"
+    },
+    {
+      "path": "menu/text/credit_text.bin",
+      "sha256": "0493ae3c2aaf59cbeaaefc6bf6270d5830a39f5466e3babfbed4ffa835cfb20d"
+    },
+    {
+      "path": "menu/text/gallery_text_u.bin",
+      "sha256": "d7c2e29d0097c7a959b8803faad4664df892c73c5735b6742ce300a8bdeec139"
+    },
+    {
+      "path": "menu/text/option_text_u.bin",
+      "sha256": "72780bb158ccdb3d528d989069e5ae6a4400f53956816fe53c9fb998c9b0ff9c"
+    },
+    {
+      "path": "menu/text/platform_text_u.bin",
+      "sha256": "c132e50172d0b8cbc91e0fd1c7293d34c2fb706dd933296c27434c210cb9d3ec"
+    },
+    {
+      "path": "menu/text/save_text_u.bin",
+      "sha256": "37a2cd0d03617b28c2ded9cd06246fdd4b005fe86c4e52b8e13d873105c29a8c"
+    },
+    {
+      "path": "menu/text/system_text_u.bin",
+      "sha256": "7bfa737af94c7a8581c05ab8e3e63398713c0a1b8b0d9fe2f16e9a62a6b4a034"
+    },
+    {
+      "path": "menu/text/title_text_u.bin",
+      "sha256": "868517b7dc41940b714519a04c4787c3a1f4051a8b441e914be6749003acbe27"
+    }
+  ]
+}

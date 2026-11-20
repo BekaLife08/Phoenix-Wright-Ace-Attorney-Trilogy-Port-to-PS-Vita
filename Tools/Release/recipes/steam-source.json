@@ -1,0 +1,21 @@
+{
+  "format": "pwaat-steam-source/1",
+  "files": [
+    {
+      "path": "globalgamemanagers",
+      "sha256": "6de16ba582456f94b5181113ea822652bf981a7e99f413f3d6af695b5694ea06"
+    },
+    {
+      "path": "sharedassets0.assets",
+      "sha256": "790a3df5b76589f286a45a9cdf6a6e30173a86a971dd1e0ce42ded46fcfcaab6"
+    },
+    {
+      "path": "StreamingAssets/menu/text/language_any.bin",
+      "sha256": "b2d2c0dc65f9b44c27777c2115735e3d9d18a4fc0bf6ad54e35b09a59c6c49b8"
+    },
+    {
+      "path": "StreamingAssets/Sound/bgm/bgm200.unity3d",
+      "sha256": "9d894ea45fa7980167be72dd50f3775246478f31e33ea4558801e353472afc74"
+    }
+  ]
+}

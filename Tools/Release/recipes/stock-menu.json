@@ -1,0 +1,95 @@
+{
+  "format": "pwaat-stock-menu/1",
+  "files": [
+    {
+      "path": "menu/text/option_text.bin",
+      "sha256": "532f8ac0690f03935d67e4803e0b620f7149e80689971034e17bd90b73ad364b",
+      "output_sha256": "c042e4bd235b9df62d5cf806a835bc8fbf1ba126d09beec3f09964460a7b5f56"
+    },
+    {
+      "path": "menu/text/option_text_b.bin",
+      "sha256": "8854434e9f84413bb3950b9bd13fa8ba65d8a4ddd2c398a111b093affb39e20b",
+      "output_sha256": "d89c32f62011d7e96844439d8a9965d294272354c632819f32d1357f0c5491f0"
+    },
+    {
+      "path": "menu/text/option_text_f.bin",
+      "sha256": "82916eebfa6a78cc8aec2620482ea9ec80a08f0fb8debb2cebdb7ed044d71189",
+      "output_sha256": "7497561a2c7d1fd5f0553cb5f5776e77010ba4cbd74d0d086d1dd9660041dbad"
+    },
+    {
+      "path": "menu/text/option_text_g.bin",
+      "sha256": "5543d846387cb5b43b58aaa5ca7e202d6325e81077781744175607441365c25c",
+      "output_sha256": "1d5642d6ff2638fcda0fe0dbd010b450c7565d247f00e30d43bd54b7c479af38"
+    },
+    {
+      "path": "menu/text/option_text_k.bin",
+      "sha256": "0f0164da5567044dba00d1189a2c399ae62fbd18c39310dc3bd87c50baba05b2",
+      "output_sha256": "f2191f83508c14ef6cfe3f00dc8b9a3dcaadacafa6aafcd651e035ab68b3a798"
+    },
+    {
+      "path": "menu/text/option_text_l.bin",
+      "sha256": "1507debe09933fa35f4ab26350cca677f7b1e5bfae319bd64db7aebaa76c029d",
+      "output_sha256": "46409e80f9499828af4711adb6834d9e0bba26800ea7dd3448f48438a4ec9f4a"
+    },
+    {
+      "path": "menu/text/option_text_s.bin",
+      "sha256": "64e20dacfb3d902a99b695290b085cdcfce629fc0f9461a6e5069ed658cfc461",
+      "output_sha256": "6aefd7543f75c92ae004f110f039e3cc7b418004a129d929fe23d8d599b3a08a"
+    },
+    {
+      "path": "menu/text/option_text_t.bin",
+      "sha256": "e2c3c9c4a15ffdf8ff12025378fbe7fa8001b37e607079f357d4d65f78d5586e",
+      "output_sha256": "29389c01e925c8475c509b5c4889c7bea950b719617fdd8d3d264357d6134fb5"
+    },
+    {
+      "path": "menu/text/option_text_u.bin",
+      "sha256": "aa5ebcdaccae18d4a43fa03caa797b7b55ccef86bf8c3916786c0df120bc5264",
+      "output_sha256": "8d06dd9a3f658095d085fc0cd07415f2fab5c70811ab1ba2a24f7bb48e47d013"
+    },
+    {
+      "path": "menu/text/save_text.bin",
+      "sha256": "56479e1e554722301cb5c37becc1a3d865d04ab0bca31f4923c977283191ef42",
+      "output_sha256": "1fd8aa8741403288fa30135f0afab44aa677b94217186adbd80d6d5818d3e6b9"
+    },
+    {
+      "path": "menu/text/save_text_b.bin",
+      "sha256": "4b7dbcb5bb58993c4883224adb7e82778262560f819bf19ea712f6afbf617b78",
+      "output_sha256": "fe54e7a6d4d63fbcda5f7b6519b13b22782643f0963c7b78698bcd73a527fd1c"
+    },
+    {
+      "path": "menu/text/save_text_f.bin",
+      "sha256": "43ec66a79ee731d7b66d8d1d595a6859e34e0dadd25b866399ebf19e186fa1b2",
+      "output_sha256": "3c3743a1eb4e8005271c9bd640fa2b637a76d7eb5fcb1bc565b5134a947f70ae"
+    },
+    {
+      "path": "menu/text/save_text_g.bin",
+      "sha256": "6c1eab4de6f156fc2177d362221f9c0938a61ef8695f2f59048e8047d8e71465",
+      "output_sha256": "5b9a5a1eb4e3eb084ad6a86468614f5d4b20ca44ac06e56f4f8c81101e4dd43d"
+    },
+    {
+      "path": "menu/text/save_text_k.bin",
+      "sha256": "60dbfb2603b71265e681cfd2d24250ee7579110590e57cdddd03e004b6b533a1",
+      "output_sha256": "89d3ea0df99abf6e6aebabdc237877364b74ec19d8cecb89075c8359067fad02"
+    },
+    {
+      "path": "menu/text/save_text_l.bin",
+      "sha256": "57be3c1d141b8c4e62a711ca39d873d4ebebe2e48dc4e8d21fb0278f331a41f0",
+      "output_sha256": "1883bb310c4beb368a11cd34febfe648bdb44e56f6fe44910f3301d472581ee4"
+    },
+    {
+      "path": "menu/text/save_text_s.bin",
+      "sha256": "aed0e23c12597f7a2b61c912b32736c5f45ea6569ea3596f32d0d3f8c58dead9",
+      "output_sha256": "d7eb3bd08a1655a882524353d6be7bfb759fd3b3207c9c4ff0f52d944d6e1673"
+    },
+    {
+      "path": "menu/text/save_text_t.bin",
+      "sha256": "d450aba97bbdbb39e25318663d1298dcafcde97308afb1dfdec6d178ae503e85",
+      "output_sha256": "a1f9332eb7a0ba8f68950dc76363a87da2fb30c4d825f11ffe76590823f404a6"
+    },
+    {
+      "path": "menu/text/save_text_u.bin",
+      "sha256": "0205669fe88d4263a2524a967a817d61aeeace04f3f641c2ca785f5f9d847518",
+      "output_sha256": "6454fa05b36ff69200b265c51395738aec8de3d7933981bc1dd60a0e8396c576"
+    }
+  ]
+}

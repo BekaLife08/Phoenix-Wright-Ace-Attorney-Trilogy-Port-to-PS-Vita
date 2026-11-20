@@ -1,0 +1,11 @@
+{
+  "": ["PS Vita設定", "PS Vitaの設定を変更します。", "操作設定", "PS Vitaのボタン配置を確認します。", "操作設定の初期化", "PS Vitaの操作設定を初期状態に戻します。", "PS Vitaの操作設定を初期状態に戻しますか？", "セーブしています。", "PS Vitaの電源を切らないでください。"],
+  "u": ["PS Vita Settings", "Change PS Vita settings.", "Controls", "View the PS Vita button assignments.", "Default Controls", "Restore the default PS Vita controls.", "Restore the default PS Vita controls?", "Saving content.", "Please do not turn off your PS Vita."],
+  "f": ["Paramètres PS Vita", "Modifier les paramètres de la PS Vita.", "Commandes", "Afficher les commandes de la PS Vita.", "Commandes par défaut", "Rétablir les commandes par défaut de la PS Vita.", "Rétablir les commandes par défaut de la PS Vita ?", "Sauvegarde en cours...", "N'éteignez pas votre PS Vita."],
+  "g": ["PS Vita-Einstellungen", "Die Einstellungen der PS Vita ändern.", "Steuerung", "Die Tastenbelegung der PS Vita anzeigen.", "Standardsteuerung", "Die Standardsteuerung der PS Vita wiederherstellen.", "Die Standardsteuerung der PS Vita wiederherstellen?", "Speichervorgang läuft.", "Bitte die PS Vita nicht ausschalten."],
+  "k": ["PS Vita 설정", "PS Vita 설정을 변경합니다.", "조작 설정", "PS Vita 버튼 배치를 확인합니다.", "기본 조작 설정", "PS Vita 조작 설정을 기본값으로 되돌립니다.", "PS Vita 조작 설정을 기본값으로 되돌리시겠습니까?", "저장 중입니다.", "PS Vita의 전원을 끄지 마십시오."],
+  "s": ["PS Vita设置", "更改PS Vita的设置。", "操作设置", "查看PS Vita的按键配置。", "默认操作设置", "恢复PS Vita的默认操作设置。", "要恢复PS Vita的默认操作设置吗？", "正在保存。", "请勿关闭PS Vita的电源。"],
+  "t": ["PS Vita設定", "變更PS Vita的設定。", "操作設定", "查看PS Vita的按鈕配置。", "預設操作設定", "恢復PS Vita的預設操作設定。", "要恢復PS Vita的預設操作設定嗎？", "正在儲存。", "請勿關閉PS Vita的電源。"],
+  "b": ["Configurações do PS Vita", "Altere as configurações do PS Vita.", "Controles", "Confira os comandos dos botões do PS Vita.", "Controles padrão", "Restaure os controles padrão do PS Vita.", "Restaurar os controles padrão do PS Vita?", "Salvando conteúdo.", "Não desligue o sistema PS Vita."],
+  "l": ["Ajustes de PS Vita", "Cambia los ajustes de tu PS Vita.", "Controles", "Consulta las funciones de los botones de PS Vita.", "Controles predeterminados", "Restablece los controles predeterminados de PS Vita.", "¿Restablecer los controles predeterminados de PS Vita?", "Guardando contenido...", "No apagues tu PS Vita."]
+}

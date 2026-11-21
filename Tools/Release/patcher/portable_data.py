@@ -103,9 +103,8 @@ def prepare_data_bundles(streaming, output, recipe, progress, cancel):
             raw = source.read_bytes()
             if hashlib.sha256(raw).hexdigest() != entry['sha256']:
                 raise ValueError('Unsupported Steam bundle version')
-            if target.exists():
-                if sha256(target, cancel) != entry['output_sha256']:
-                    raise ValueError('A different output bundle already exists')
+            if target.exists() and sha256(target, cancel) == entry['output_sha256']:
+                pass
             else:
                 encoded = convert(raw, entry)
                 if hashlib.sha256(encoded).hexdigest() != entry['output_sha256']:
@@ -116,7 +115,7 @@ def prepare_data_bundles(streaming, output, recipe, progress, cancel):
                     try:
                         temporary.write(encoded)
                         temporary.close()
-                        temporary_path.rename(target)
+                        temporary_path.replace(target)
                     finally:
                         temporary.close()
                         temporary_path.unlink(missing_ok=True)

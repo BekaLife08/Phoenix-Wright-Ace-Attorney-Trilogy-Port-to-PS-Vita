@@ -232,16 +232,12 @@ def prepare_graphics(streaming, output, recipe_path, progress, cancel, *, exclud
             if hashlib.sha256(encoded).hexdigest() != entry['output_sha256']:
                 raise ValueError('Output does not match the verified conversion')
             target.parent.mkdir(parents=True, exist_ok=True)
-            if target.exists():
-                if sha256(target) != hashlib.sha256(encoded).hexdigest():
-                    raise ValueError('Unexpected output file')
-            else:
-                temp = target.with_name(target.name + '.tmp')
-                try:
-                    temp.write_bytes(encoded)
-                    temp.replace(target)
-                finally:
-                    temp.unlink(missing_ok=True)
+            temp = target.with_name(target.name + '.tmp')
+            try:
+                temp.write_bytes(encoded)
+                temp.replace(target)
+            finally:
+                temp.unlink(missing_ok=True)
         except (OSError, ValueError, KeyError) as error:
             raise PatchError(f'Graphics bundle {relative}: {error}') from error
         if progress:

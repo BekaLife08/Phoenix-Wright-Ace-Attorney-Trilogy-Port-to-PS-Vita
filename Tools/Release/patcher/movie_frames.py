@@ -9,6 +9,7 @@ import tempfile
 
 import etcpak
 import UnityPy
+from PIL import Image
 
 from .core import PatchError, check_cancel, sha256
 from .graphics import read_bundle
@@ -21,6 +22,72 @@ FRAME_SIZE = WIDTH * HEIGHT // 2
 HEADER = struct.Struct('<8s6i')
 MAGIC = b'PWAVID1\0'
 DXT1 = 10
+CONFRONT_MOVIES = (
+    ('film01_confront', 512, 256, 12, tuple(f'{i:03d}' for i in range(1, 900, 2))),
+    ('film02_confront', 512, 512, 10, tuple(f'{i:05d}' for i in range(1, 1421))),
+)
+
+
+def prepare_confront_movies(streaming, output, progress=None, cancel=None, *, fingerprints=None):
+    """Create the two 30 FPS case-five streams from Steam texture bundles."""
+    source_dir = streaming / 'GS1/moviescriptable'
+    target_dir = output / 'Media/StreamingAssets/GS1/Movie'
+    if not source_dir.resolve().is_relative_to(streaming.resolve()) or not target_dir.resolve().is_relative_to(output):
+        raise PatchError('Case-five video path points outside the selected folder.')
+    target_dir.mkdir(parents=True, exist_ok=True)
+    reports = {}
+    for name, width, height, fmt, expected in CONFRONT_MOVIES:
+        check_cancel(cancel)
+        header = HEADER.pack(MAGIC, width, height, 30, 1, len(expected), fmt)
+        size = width * height // (2 if fmt == DXT1 else 1)
+        bundle = source_dir / (name + '.unity3d')
+        destination = target_dir / (name + '.frames.bin')
+        if not bundle.resolve().is_relative_to(source_dir.resolve()) or not destination.resolve().is_relative_to(target_dir.resolve()):
+            raise PatchError('Case-five video file points outside the selected folder.')
+        source_hash = sha256(bundle, cancel)
+        key = 'GS1/Movie/' + destination.name
+        fingerprint = fingerprints[key] if fingerprints is not None else None
+        if fingerprint and source_hash != fingerprint['steam_bundle_sha256']:
+            raise PatchError('Unsupported Steam frame bundle: ' + bundle.name)
+        if destination.exists() and fingerprint and sha256(destination, cancel) == fingerprint['sha256']:
+            reports[key] = dict(fingerprint)
+            continue
+        with tempfile.TemporaryDirectory(prefix='.vita-confront-', dir=target_dir) as folder:
+            staged = Path(folder) / destination.name
+            env = read_bundle(bundle.read_bytes())
+            frames = {}
+            for obj in env.objects:
+                if obj.type.name == 'Texture2D':
+                    # Object names are short. Reading through the object reader here
+                    # avoids decoding full textures until their playback turn.
+                    frame_name = obj.peek_name()
+                    if frame_name in frames:
+                        raise PatchError('Duplicate case-five frame: ' + str(frame_name))
+                    frames[frame_name] = obj
+            if set(frames) != set(expected):
+                raise PatchError('Unexpected frame names in ' + bundle.name)
+            with staged.open('xb') as stream:
+                stream.write(header)
+                for index, frame_name in enumerate(expected, 1):
+                    check_cancel(cancel)
+                    texture = frames[frame_name].read()
+                    if (texture.m_Width, texture.m_Height, texture.m_TextureFormat) == (width, height, fmt):
+                        data = texture.get_image_data()[:size]
+                    else:
+                        image = texture.image.convert('RGBA').resize((width, height), Image.Resampling.LANCZOS)
+                        rgba = image.transpose(Image.Transpose.FLIP_TOP_BOTTOM).tobytes()
+                        data = (etcpak.compress_bc1 if fmt == DXT1 else etcpak.compress_bc3)(rgba, width, height)
+                    if len(data) != size:
+                        raise PatchError('Unexpected case-five frame size: ' + frame_name)
+                    stream.write(data)
+                    if progress:
+                        progress(name, index, len(expected), frame_name)
+            digest = sha256(staged, cancel)
+            if fingerprint and digest != fingerprint['sha256']:
+                raise PatchError('Case-five frame stream failed verification: ' + key)
+            staged.replace(destination)
+        reports[key] = {'frames': len(expected), 'fps': 30, 'sha256': digest, 'steam_bundle_sha256': source_hash}
+    return reports
 
 
 def video_payload(bundle):
@@ -157,9 +224,8 @@ def prepare_stock_movies(streaming, output, ffmpeg, progress=None, cancel=None):
                 relative = (movie_dir / target.name).as_posix()
                 digest = sha256(target, cancel)
                 destination = target_dir / target.name
-                if destination.exists() and (not destination.resolve().is_relative_to(target_dir.resolve())
-                                             or sha256(destination, cancel) != digest):
-                    raise ValueError('A different frame stream already exists')
+                if destination.exists() and not destination.resolve().is_relative_to(target_dir.resolve()):
+                    raise ValueError('The movie destination points outside the output folder')
                 results[relative] = {'frames': frames, 'fps': FPS, 'sha256': digest,
                                      'steam_bundle_sha256': sha256(bundle, cancel)}
             except (OSError, ValueError, KeyError) as error:
@@ -171,6 +237,5 @@ def prepare_stock_movies(streaming, output, ffmpeg, progress=None, cancel=None):
         check_cancel(cancel)
         for relative in results:
             destination = target_dir / Path(relative).name
-            if not destination.exists():
-                (work / destination.name).rename(destination)
+            (work / destination.name).replace(destination)
     return results

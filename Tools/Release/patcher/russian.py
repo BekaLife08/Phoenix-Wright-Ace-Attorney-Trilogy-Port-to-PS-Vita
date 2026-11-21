@@ -4,6 +4,7 @@ import json
 import hashlib
 import os
 from pathlib import Path
+import shutil
 import sys
 import tempfile
 
@@ -67,8 +68,10 @@ def prepare_russian(game, installed, output, progress=None, cancel=None):
     streaming = pc / 'StreamingAssets'
     templates = native / 'StreamingAssets'
     destination = output / 'Media/StreamingAssets/Russian'
-    if not destination.resolve().is_relative_to(output) or destination.exists():
-        raise PatchError('The output already contains a Russian folder. Choose a different output folder.')
+    if not destination.resolve().is_relative_to(output):
+        raise PatchError('The output Russian path points outside the output folder.')
+    if destination.exists():
+        shutil.rmtree(destination)
 
     localization = Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parents[3])) / 'Tools/Localization'
     sys.path.insert(0, str(localization))

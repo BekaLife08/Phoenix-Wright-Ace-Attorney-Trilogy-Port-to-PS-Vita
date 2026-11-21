@@ -147,9 +147,7 @@ def prepare_boot_config(game, output):
     if source.read_bytes().splitlines().count(debugger) != 1:
         raise PatchError('Unexpected Steam boot.config format.')
     expected = debugger + b'\n'
-    if target.exists():
-        if target.read_bytes() != expected:
-            raise PatchError('The output folder contains boot.config from a different build.')
+    if target.exists() and target.read_bytes() == expected:
         return
     target.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(dir=target.parent, delete=False) as stream:
@@ -157,13 +155,14 @@ def prepare_boot_config(game, output):
         try:
             stream.write(expected)
             stream.close()
-            staged.rename(target)
+            staged.replace(target)
         finally:
             stream.close()
             staged.unlink(missing_ok=True)
 
 
-def prepare(game, output, progress=None, cancel=None, *, ffmpeg=None, steam_only=False, graphics_exclusions=()):
+def prepare(game, output, progress=None, cancel=None, *, ffmpeg=None, steam_only=False, graphics_exclusions=(),
+            layout=None):
     game, output = locate(game), Path(output).resolve()
     if output == game or game in output.parents or output in game.parents:
         raise PatchError('Choose a separate output folder outside the source game.')
@@ -185,9 +184,7 @@ def prepare(game, output, progress=None, cancel=None, *, ffmpeg=None, steam_only
         target = output / 'Media/StreamingAssets' / entry['path']
         if not target.resolve().is_relative_to(output):
             raise PatchError('Output path points outside the selected folder.')
-        if target.exists() and sha256(target) != entry['sha256']:
-            raise PatchError('Unexpected output file: ' + entry['path'])
-        if not target.exists():
+        if not (target.exists() and sha256(target) == entry['sha256']):
             target.parent.mkdir(parents=True, exist_ok=True)
             descriptor, name = tempfile.mkstemp(dir=target.parent)
             try:
@@ -236,7 +233,7 @@ def prepare(game, output, progress=None, cancel=None, *, ffmpeg=None, steam_only
                      if p.is_file() and p.suffix != '.meta' and
                      p.relative_to(streaming).as_posix().lower() not in processed and
                      p.relative_to(streaming).parts[0].lower() != 'sound')
-    reference = reference_layout()
+    reference = reference_layout() if layout is None else layout
     required = reference['files']
     missing_reference = [path for path in required if not (output / 'Media' / path).is_file()]
     report = {'complete_media': False, 'audio': result, 'copied': len(sources), 'portable_graphics': len(graphics),

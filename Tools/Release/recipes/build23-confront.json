@@ -1,0 +1,14 @@
+{
+  "GS1/Movie/film01_confront.frames.bin": {
+    "frames": 450,
+    "fps": 30,
+    "sha256": "dfa78ae8e6f5bcb27a79133721dcdbe728c2dd67be914b8e1f545053e38f522b",
+    "steam_bundle_sha256": "7856789de0e82b52d68007dca3b2e4b0e28b738ce56c5d385776341504ae754e"
+  },
+  "GS1/Movie/film02_confront.frames.bin": {
+    "frames": 1420,
+    "fps": 30,
+    "sha256": "1d3219a44b58492fcb21bc359c5b4a5ad0559da1f411588c45b23af918befdad",
+    "steam_bundle_sha256": "aad55f91f64737ab6a66bc65b67a9bc229e77b1915dc106fb56501cfea24f4d9"
+  }
+}

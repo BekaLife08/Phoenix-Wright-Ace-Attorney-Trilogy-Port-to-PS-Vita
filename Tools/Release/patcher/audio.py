@@ -20,6 +20,8 @@ from .fsb import parse, hevag
 
 RECIPE = 'pwaat-local-audio/1'
 AUDIO_SCHEMA = 'c6104784566091ce5562d86ca06c5b89b1f1c6a20a8175a2c23661e42438d595'
+# This version has the same encoder and differs only in writing the receipt.
+PREVIOUS_RECEIPT_SOURCE = '96fb28bb87ec412a962b01d21bc2b8d31e21d79210825629adf6a973a0bb55c9'
 
 
 def tools():
@@ -181,17 +183,17 @@ def _convert_tree(game: Path, output: Path, progress=None, cancel=None, limit=No
     vendor_record = encoder.parent / 'audio-tools.json'
     audio_components = (sorted(decoder.parent.glob('*.dll')) if os.environ.get('PWAAT_AUDIO_TOOLS')
                         else [vendor_record])
-    identity = hashlib.sha256((RECIPE + sha256(Path(__file__)) + sha256(Path(__file__).with_name('fsb.py'))
-                               + sha256(decoder) + sha256(encoder)
-                               + ''.join(sha256(path) for path in audio_components)).encode()).hexdigest()
+    components = (sha256(Path(__file__).with_name('fsb.py')) + sha256(decoder) + sha256(encoder)
+                  + ''.join(sha256(path) for path in audio_components))
+    identity = hashlib.sha256((RECIPE + sha256(Path(__file__)) + components).encode()).hexdigest()
+    previous_identity = hashlib.sha256((RECIPE + PREVIOUS_RECEIPT_SOURCE + components).encode()).hexdigest()
     marker = output / '.pwaat-local-audio.json'
     state = {'format': RECIPE, 'recipe_sha256': identity, 'complete': {}, 'pending': {}}
-    if any(p.name != '.pwaat-local-audio.lock' for p in output.iterdir()):
-        if not marker.is_file():
-            raise PatchError('Choose an empty output folder or resume a previous conversion')
-        state = json.loads(marker.read_text(encoding='utf-8'))
-        if state.get('format') != RECIPE or state.get('recipe_sha256') != identity:
-            raise PatchError('The conversion recipe has changed. Choose a new output folder')
+    if marker.is_file():
+        loaded = json.loads(marker.read_text(encoding='utf-8'))
+        if loaded.get('format') == RECIPE and loaded.get('recipe_sha256') in (identity, previous_identity):
+            state = loaded
+            state['recipe_sha256'] = identity
     files = sorted((streaming / 'Sound').rglob('*.unity3d'))
     if limit is not None:
         if limit < 1:
@@ -207,7 +209,15 @@ def _convert_tree(game: Path, output: Path, progress=None, cancel=None, limit=No
                 json.dump(state, stream, ensure_ascii=False, indent=2)
                 stream.flush()
                 os.fsync(stream.fileno())
-            os.replace(temp, marker)
+            for attempt in range(8):
+                try:
+                    os.replace(temp, marker)
+                    break
+                except PermissionError as error:
+                    if getattr(error, 'winerror', None) not in (5, 32) or attempt == 7:
+                        raise
+                    check_cancel(cancel)
+                    time.sleep(0.1 * (attempt + 1))
         finally:
             temp.unlink(missing_ok=True)
 
@@ -228,8 +238,6 @@ def _convert_tree(game: Path, output: Path, progress=None, cancel=None, limit=No
                 save()
             skipped += 1
         else:
-            if target.exists() and record is None:
-                raise PatchError('Unexpected output file: ' + relative)
             jobs.append((source, relative, target, digest))
         if progress:
             progress('Source', index + 1, len(files), relative)

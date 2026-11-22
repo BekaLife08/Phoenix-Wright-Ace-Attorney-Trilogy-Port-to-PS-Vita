@@ -46,7 +46,7 @@ The port is **a loader and a set of code changes only**. It does not contain any
 |------|---------|
 | Console | PS Vita or PS TV with a homebrew-enabled firmware (such as HENkaku / Enso) |
 | Game copy | A legitimately purchased PC copy of *Phoenix Wright: Ace Attorney Trilogy* |
-| PC | Windows, to run the extraction tool |
+| PC | Windows (64-bit) for the standalone `.exe` converter, or macOS / Linux via Python 3 / Wine |
 | Storage | Enough free space on `ux0:` for the converted `Media` folder |
 | Software | [VitaShell](https://github.com/TheOfficialFloW/VitaShell) or any FTP client to transfer files |
 
@@ -64,14 +64,20 @@ The port is **a loader and a set of code changes only**. It does not contain any
 
 ### 2. Prepare your game files
 
-1. Make sure you own a licensed PC copy of the game.
-2. Download the **extraction tool** (`.exe`) from the same Releases page.
-3. Run the tool and point it at the game's `PWAAT_Data` folder.
-4. *(Optional)* To play in Russian, download the translation patch by **Failing Forward** from their [guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1845804123) and load it into the extraction tool. It will be run through the conversion together with the game files.
-5. Wait for it to finish. It will generate a **`Media`** folder.
+1. Make sure you own a licensed Steam PC copy of the game.
+2. Download the **converter archive** (`PWAATVitaConverter-Windows.zip` for Windows, or `PWAATVitaConverter-macOS-Linux.zip` for macOS / Linux) from the [**Releases**](../../releases) page (or the `Release/` folder) and extract all files into one folder.
+   - Keep `PWAATVitaConverter.exe`, `build24-core.pwaatpatch`, and `ffmpeg.exe` in the same folder (download `ffmpeg.exe` from [FFmpeg](https://github.com/FFmpeg/FFmpeg) / [gyan.dev builds](https://www.gyan.dev/ffmpeg/builds/) or have `ffmpeg` in your system `PATH`).
+3. Run `PWAATVitaConverter.exe` and choose one of the **4 modes**:
+   - **1** — Convert the clean Steam PC version (all 9 official languages) to a complete PS Vita `Media` folder.
+   - **2** — Add the **Failing Forward** Russian translation (and fan Russian voice pack) to an existing Vita `Media` folder.
+   - **3** — Convert the Steam PC version **and** add the **Failing Forward** Russian translation (with fan Russian voice pack) in one step.
+   - **4** — Install **any other community PC translation** (custom language slot, no voice-over): asks for your Vita `Media`, the original Steam folder, the translated PC folder, the language name to display in settings, and an optional `.ttf`/`.otf` font (press Enter to auto-detect the font directly from the patch).
+4. Choose an output folder — you can pick an empty folder or your existing `OBJECTION` folder directly (files outside `Media` such as `eboot.bin` and `sce_sys` are left untouched).
+5. Wait for it to finish. It will generate a complete **`Media`** folder.
 
 > [!NOTE]
-> The Russian patch is optional. The game works fully without it, and nothing needs to be copied by hand: the tool converts the patch for you.
+> The Russian patch and community translations are completely optional. The game works fully without them, and nothing needs to be copied by hand: the converter handles everything locally on your PC.
+> Mode 4 uses the same extra language slot as Russian (and replaces it, including the Russian voice pack and Russian title logo). Re-run Mode 2 at any time to restore Russian.
 
 ### 3. Copy the files to your Vita
 
@@ -102,13 +108,15 @@ The port includes all **9 languages** from the latest version of the PC game, pl
 | 7 | Traditional Chinese | Original game |
 | 8 | Spanish (Latin America) | Original game |
 | 9 | Portuguese (Brazil) | Original game |
-| 10 | **Russian** | Fan translation by **Failing Forward** |
+| 10 | **Russian / Custom** | Fan translation by **Failing Forward** (Modes 2–3), or any community PC translation (Mode 4) |
 
-### Russian translation
+### Russian & Community Translations
 
-The built-in Russian translation was made by the **Failing Forward** team and is a fan project, not an official localization. You can read more about it, and about the team, here:
+The built-in Russian translation slot was made for the **Failing Forward** fan project (not an official localization). You can read more about it here:
 
 **[Failing Forward - Ace Attorney Trilogy translation (Steam guide)](https://steamcommunity.com/sharedfiles/filedetails/?id=1845804123)**
+
+If you want to play in another language that has a PC fan translation (e.g. Vietnamese, Polish, Italian, etc.), use **Mode 4** in the converter — it diffs the PC translation against your clean Steam copy, converts the modified bundles, auto-extracts the patch font, and lets you set your own language label in the settings menu (without voice-over).
 
 ---
 
@@ -224,6 +232,9 @@ Make sure your game has `Media`. If it does, reinstall the game or check your me
 - **[Failing Forward](https://steamcommunity.com/sharedfiles/filedetails/?id=1845804123)** - for russian translation and graphic help
 - **VitaSDK** and the PS Vita homebrew community
 - **AssetRipper** and the tools used for analysis and conversion
+- **[xdelta3](https://github.com/jmacd/xdelta)** — binary delta patching used by the converter
+- **[FFmpeg](https://github.com/FFmpeg/FFmpeg)** — video frame conversion used by the converter
+- **[vgmstream](https://github.com/vgmstream/vgmstream)** — audio decoding used by the converter
 - Everyone who tested, reported bugs and helped
 
 ---

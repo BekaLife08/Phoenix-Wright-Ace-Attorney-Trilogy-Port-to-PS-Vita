@@ -73,6 +73,7 @@ def convert_bundle(rel,raw,pc_root,native_root,animation_fields=None):
     ru_tex=native_objects(ru,'Texture2D');ru_sprites=native_objects(ru,'Sprite')
     is_new=rel in NEW
     original=None if is_new or pc_root is None else reader.load((pc_root/rel).read_bytes())
+    orig_tex={} if original is None else native_objects(original,'Texture2D',True)
     orig_sprites={} if original is None else native_objects(original,'Sprite')
     if is_new:
         base=reader.load((native_root/'GS1/BG/bg00bu.unity3d').read_bytes())
@@ -87,8 +88,23 @@ def convert_bundle(rel,raw,pc_root,native_root,animation_fields=None):
         if not targets:raise ValueError('Missing native Texture '+key)
         source=parsed_texture(source_obj);source_image=source.image
         if source_image is None:raise ValueError('Missing translated pixels '+key)
+        orig_entry=next((v[1] for k,v in orig_tex.items() if k.split(' #')[0]==key),None)
         for target_obj,target_tree in targets:
-            width,height=(source_tree['m_Width'],source_tree['m_Height']) if is_new else (target_tree['m_Width'],target_tree['m_Height'])
+            sw,sh=source_tree['m_Width'],source_tree['m_Height']
+            tw,th=target_tree['m_Width'],target_tree['m_Height']
+            if is_new:
+                width,height=sw,sh
+            elif orig_entry is not None and (sw,sh)!=(orig_entry['m_Width'],orig_entry['m_Height']):
+                # Mod resized the texture canvas (e.g. taller nameplate atlas): preserve its aspect/size
+                # scaled by the native/Steam ratio so sprite rects stay aligned.
+                sx=tw/orig_entry['m_Width'] if orig_entry['m_Width'] else 1.0
+                sy=th/orig_entry['m_Height'] if orig_entry['m_Height'] else 1.0
+                scale=min(sx,sy)
+                width,height=max(4,round(sw*scale)),max(4,round(sh*scale))
+                if max(width,height)>2048:
+                    width,height=tw,th
+            else:
+                width,height=tw,th
             if is_new and max(width,height)>2048:raise ValueError('New Sprite exceeds the Sprite atlas limit')
             image=source_image if source_image.size==(width,height) else source_image.resize((width,height),Image.Resampling.LANCZOS)
             texture=target_obj.read();fmt=target_tree['m_TextureFormat']

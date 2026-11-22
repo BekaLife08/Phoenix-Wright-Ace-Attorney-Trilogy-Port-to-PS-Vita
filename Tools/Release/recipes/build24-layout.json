@@ -2,16 +2,16 @@
   "reference": "build24",
   "files": {
     "boot.config": "ca5f05780f0a824b3748a09b6d4ded9ca76588bba38aef00a780cfa6e25a91e0",
-    "globalgamemanagers": "f601c239edaaa2e138a98fa4bb91529daeaaff31f2a01feb2a07b79c73fc2f7f",
+    "globalgamemanagers": "c259531c05c12e7b3b7ebe306cc21f915aea4f5f5e383c76bd04aa9512480223",
     "globalgamemanagers.assets": "42a29a0099c579066b8358ce8980207f9b67c487faacc7cfc5fddfd6d9ed7f31",
     "globalgamemanagers.assets.resS": "f40d169fbfb747d0dc2a3c41914d57ac6a8123cc84134f9bf99efc672591f606",
     "level0": "5d8d3154f1cb10e8b8cae54fcb4dad82eb4d0dd0c56f46197763e32df03f7071",
-    "Metadata/global-metadata.dat": "dc0b6fb22696a8f89d87983ab6bc362c465ff7a1f79f21202bb451a5a9e5f71b",
+    "Metadata/global-metadata.dat": "3658001f10e4c0f7e18ded25fa75aaf5041976fa04ab1812e4056e37cac722db",
     "methods_pointedto_by_uievents.xml": "10bb0c0e7c0ccd3284ab2b8591120712bf707a93c5dc18edb63b90e72bc3b479",
-    "Modules/il2CppAssemblies.suprx": "ca9f84fe1e8ebf2dd665158caed444ebb86f9a9517b32cc95e80f61d57ed9adc",
+    "Modules/il2CppAssemblies.suprx": "a49100f22d6b21d942f8b3c8138d61683d437c7d2824138b917635837f78277d",
     "Modules/pthread.suprx": "a924c9ccbee18e8f4d91f61663aeda2a995c66650f67cef1b8235bd8f5872ecc",
     "platform_native_link.xml": "2f3705079e176f4ba0d0eeff216f2bc3151422c675bb6a2d8ab6589cc2b4ab1e",
-    "Plugins/PWAATrophyNative.suprx": "9f106c8b7bd0eb8b511830c0ee177d4b112d19373a74db4d4c3bb27c56e67149",
+    "Plugins/PWAATrophyNative.suprx": "7c0d1a4641af685894e16910b54878343a75d61f82f179d65fa15826d675c963",
     "Plugins/PWAATrophyNative.suprx.b.suprx": "e93e84bc15fd358e3e72104084de9909f85d1e0424af4bfc7b6f0fcae1e883e1",
     "Plugins/PWAATrophyNative_stub.a": "95f0d2df92f2ceab087c682a0608fc6620af4d19ea516846e1ed60fa0413ad1a",
     "preserved_derived_types.xml": "375ed78377b955ce65603dc20b76cfc24b1895b46ce475a7fbe0f15223315944",
@@ -7873,7 +7873,7 @@
     "StreamingAssets/staffroll/edst17l.unity3d": "835fa9accc64e9aa3b8b9bd8135b9b4a60ba4d2a0a74901693725a39e2c69efc",
     "StreamingAssets/staffroll/edst18b.unity3d": "dbaaa067d4838b57e2952d743d0470d0b588d10c6ab4164d028e3e72a9955356",
     "StreamingAssets/staffroll/edst18l.unity3d": "53570bd1ab7b8d4a185a4c0e03ba0b1ab1b0bf3da08e5048e2be57ec261334ed",
-    "SymbolMap": "6dd8efcf2ac92709ca9201d5f832c1d9111cfdf499bb4c7ac1536d505e07cec0",
+    "SymbolMap": "dbc00da7406c1e948fca6d7dae49f53d5118b48a11ba861d24828a435f62f759",
     "UnityEngine.xml": "956a33ad3d17c5e2572567830e9a725e682500c08e6a2b44b23cf6f62d33efb0"
   }
 }

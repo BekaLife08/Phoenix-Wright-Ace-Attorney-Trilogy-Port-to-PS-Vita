@@ -22,9 +22,11 @@ FRAME_SIZE = WIDTH * HEIGHT // 2
 HEADER = struct.Struct('<8s6i')
 MAGIC = b'PWAVID1\0'
 DXT1 = 10
+# Use NPOT heights (260, 508) so PS Vita GXM / Vita3K stores the dynamic
+# Texture2D linearly instead of Morton-swizzled, preventing frame-update artifacts.
 CONFRONT_MOVIES = (
-    ('film01_confront', 512, 256, 12, tuple(f'{i:03d}' for i in range(1, 900, 2))),
-    ('film02_confront', 512, 512, 10, tuple(f'{i:05d}' for i in range(1, 1421))),
+    ('film01_confront', 512, 260, 12, tuple(f'{i:03d}' for i in range(1, 900, 2))),
+    ('film02_confront', 512, 508, 10, tuple(f'{i:05d}' for i in range(1, 1421))),
 )
 
 

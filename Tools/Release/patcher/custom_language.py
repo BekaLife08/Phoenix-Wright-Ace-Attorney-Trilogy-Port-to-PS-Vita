@@ -1,0 +1,379 @@
+"""Install an arbitrary community PC translation as the extra Vita language slot.
+
+The game has one extra language slot (internally ``Language.RUSSIAN``).  The slot
+reads its bundles from ``Media/StreamingAssets/Russian``, takes its label from
+``Russian/language.txt`` and uses the ``VitaRussian/TextFont`` font from
+``resources.assets``.  This module fills that slot with any PC translation that
+overrides the English StreamingAssets files, without needing a per-translation recipe.
+"""
+
+import hashlib
+import io
+import json
+import shutil
+import struct
+import sys
+import tempfile
+from pathlib import Path
+
+from .core import PatchError, check_cancel
+from .local import locate
+from .russian import installed_media, publish_overlay
+
+
+LABEL_FILE = 'language.txt'
+FONT_BACKUP = 'resources.assets.default-font'
+LOGO_BACKUP = 'globalgamemanagers.default-logo'
+TEXT_EXTENSIONS = ('.mdt', '.bin', '.cho')
+VOICE_FOLDERS = ('sound/',)  # audio is never converted here
+# Not usable on Vita: PC/PS4-only button banks and the PC patch's renamed language list.
+SKIPPED = {
+    'menu/common/court_record_03_pcu.unity3d',
+    'menu/common/court_record_02_ps4u.unity3d',
+    'menu/text/language_any.bin',
+}
+
+
+def _localization():
+    folder = Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parents[3])) / 'Tools/Localization'
+    if str(folder) not in sys.path:
+        sys.path.insert(0, str(folder))
+
+
+def locate_translation(folder):
+    """Find the PWAAT_Data folder of a translation package (layouts vary)."""
+    folder = Path(folder).resolve(strict=True)
+    candidates = [folder, folder / 'PWAAT_Data', folder / 'Localization/PWAAT_Data']
+    if folder.name.lower() == 'streamingassets':
+        candidates.append(folder.parent)
+    for candidate in candidates:
+        if (candidate / 'StreamingAssets').is_dir():
+            return candidate
+    raise PatchError('Select the translation folder that contains PWAAT_Data/StreamingAssets.')
+
+
+def _digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def changed_files(original, translated, cancel=None):
+    """Return (changed, added, ignored, sources) for files under StreamingAssets.
+
+    Some translations ship decrypted bundles as ``name.unity3d.dec``; they are
+    treated as ``name.unity3d``. ``sources`` maps each relative path to its real file.
+    """
+    changed, added, ignored, sources = [], [], [], {}
+    for path in sorted(translated.rglob('*')):
+        check_cancel(cancel)
+        if not path.is_file():
+            continue
+        relative = path.relative_to(translated).as_posix()
+        if relative.lower().endswith('.dec'):
+            relative = relative[:-4]
+        if not relative.lower().endswith(('.unity3d', *TEXT_EXTENSIONS)):
+            continue
+        if relative.lower() in SKIPPED or relative.lower().startswith(VOICE_FOLDERS):
+            ignored.append(relative)
+            continue
+        if relative in sources and path.suffix.lower() == '.dec':
+            continue
+        sources[relative] = path
+        source = original / relative
+        if not source.is_file():
+            added.append(relative)
+        elif source.stat().st_size != path.stat().st_size or _digest(source) != _digest(path):
+            changed.append(relative)
+    return changed, added, ignored, sources
+
+TTF_MAGICS = (b'\x00\x01\x00\x00', b'OTTO', b'true', b'ttcf')
+
+
+def _validate_font_bytes(data):
+    if len(data) < 12 or data[:4] not in TTF_MAGICS:
+        return None
+    from PIL import ImageFont
+    try:
+        font = ImageFont.truetype(io.BytesIO(data), 32)
+        name = ' '.join(part for part in font.getname() if part).strip()
+        return name or 'CustomFont'
+    except Exception:
+        return None
+
+
+def _extract_font_from_unityfs(path):
+    """Extract an embedded TTF/OTF font from a UnityFS AssetBundle (even if TypeTree fails)."""
+    from UnityPy.helpers import CompressionHelper
+
+    raw = Path(path).read_bytes()
+    if not raw.startswith(b'UnityFS\x00'):
+        return None, None
+    pos = 0
+
+    def read_cstr():
+        nonlocal pos
+        end = raw.index(b'\x00', pos)
+        text = raw[pos:end].decode('ascii', errors='replace')
+        pos = end + 1
+        return text
+
+    read_cstr()  # UnityFS
+    pos += 4     # format version
+    read_cstr()  # player version
+    read_cstr()  # generator version
+    _, c_info, u_info, flags = struct.unpack_from('>QIII', raw, pos)
+    pos += 20
+    ctype = flags & 0x3F
+    if flags & 0x80:
+        blocks_info_bytes = raw[len(raw) - c_info:]
+        data_start = pos
+    else:
+        blocks_info_bytes = raw[pos:pos + c_info]
+        data_start = pos + c_info
+    blocks_info = CompressionHelper.DECOMPRESSION_MAP[ctype](blocks_info_bytes, u_info)
+    bp = 16  # 16-byte uncompressed data hash
+    bcount = struct.unpack_from('>I', blocks_info, bp)[0]
+    bp += 4
+    out = bytearray()
+    dp = data_start
+    for _ in range(bcount):
+        u_sz, c_sz, bflags = struct.unpack_from('>IIH', blocks_info, bp)
+        bp += 10
+        chunk = raw[dp:dp + c_sz]
+        dp += c_sz
+        out.extend(CompressionHelper.DECOMPRESSION_MAP[bflags & 0x3F](chunk, u_sz))
+    for magic in (b'\x00\x01\x00\x00', b'OTTO'):
+        idx = 4
+        while True:
+            hit = out.find(magic, idx)
+            if hit < 0:
+                break
+            length = struct.unpack_from('<I', out, hit - 4)[0]
+            if 10_000 <= length <= len(out) - hit:
+                candidate = bytes(out[hit:hit + length])
+                name = _validate_font_bytes(candidate)
+                if name:
+                    return candidate, name
+            idx = hit + 4
+    return None, None
+
+
+def _extract_modified_sharedassets_font(original_pwaat, patched_pwaat):
+    """If the PC translation modified FOT-ModeMinALargeStd-R in sharedassets0.assets, extract it."""
+    import UnityPy
+
+    src_sa = original_pwaat / 'sharedassets0.assets'
+    mod_sa = patched_pwaat / 'sharedassets0.assets'
+    if not src_sa.is_file() or not mod_sa.is_file():
+        return None, None
+    if src_sa.stat().st_size == mod_sa.stat().st_size and _digest(src_sa) == _digest(mod_sa):
+        return None, None
+
+    def read_fonts(path):
+        found = {}
+        env = UnityPy.load(str(path))
+        for obj in env.objects:
+            if obj.type.name == 'Font':
+                data = obj.read()
+                raw = bytes(getattr(data, 'm_FontData', b'') or b'')
+                if raw:
+                    found[getattr(data, 'm_Name', '')] = raw
+        return found
+
+    try:
+        orig_fonts = read_fonts(src_sa)
+        mod_fonts = read_fonts(mod_sa)
+    except Exception:
+        return None, None
+    for name, raw in mod_fonts.items():
+        if orig_fonts.get(name) != raw:
+            valid = _validate_font_bytes(raw)
+            if valid:
+                return raw, f'{valid} (from sharedassets0.assets)'
+    return None, None
+
+
+def detect_patch_font(original_pwaat, translated_root, patched_pwaat):
+    """Auto-detect a font shipped inside a community PC translation."""
+    # 1. Modified font inside PWAAT_Data/sharedassets0.assets
+    data, label = _extract_modified_sharedassets_font(original_pwaat, patched_pwaat)
+    if data:
+        return data, label
+
+    # 2. Standalone .ttf/.otf or UnityFS font bundle inside the translation folder
+    roots = []
+    for candidate in (Path(translated_root).resolve(), patched_pwaat.parent, patched_pwaat):
+        if candidate.is_dir() and candidate not in roots:
+            roots.append(candidate)
+
+    for root in roots:
+        for ext in ('*.ttf', '*.otf'):
+            for path in sorted(root.rglob(ext)):
+                if 'streamingassets' in [p.lower() for p in path.parts]:
+                    continue
+                raw = path.read_bytes()
+                valid = _validate_font_bytes(raw)
+                if valid:
+                    return raw, f'{valid} (from {path.name})'
+        for rel in ('Font/Font.unity3d', 'Font/font', 'Localization/Font/Font.unity3d', 'Localization/Font/font'):
+            bundle = root / rel
+            if bundle.is_file():
+                try:
+                    raw, valid = _extract_font_from_unityfs(bundle)
+                    if raw:
+                        return raw, f'{valid} (from {rel})'
+                except Exception:
+                    pass
+    return None, None
+
+
+def patch_font(media, font, progress=None, *, font_bytes=None, font_label=None):
+    """Replace the extra-language font inside resources.assets (None restores the default)."""
+    import UnityPy
+
+    assets = media / 'resources.assets'
+    backup = media / FONT_BACKUP
+    if font is None and font_bytes is None:
+        if backup.is_file():
+            shutil.copyfile(backup, assets)
+            backup.unlink()
+        return 'default'
+    if font_bytes is not None:
+        data = font_bytes
+        name = font_label or 'CustomFont'
+    else:
+        font = Path(font).resolve(strict=True)
+        raw = font.read_bytes()
+        if raw.startswith(b'UnityFS\x00'):
+            data, extracted_name = _extract_font_from_unityfs(font)
+            if not data:
+                raise PatchError('No TrueType/OpenType font found inside Unity bundle: ' + font.name)
+            name = f'{extracted_name} (from {font.name})'
+        else:
+            if not _validate_font_bytes(raw):
+                raise PatchError('The selected file is not a TrueType/OpenType font: ' + font.name)
+            data = raw
+            name = font.name
+    if not backup.is_file():
+        shutil.copyfile(assets, backup)
+    env = UnityPy.load(str(backup))  # always patch from the pristine file
+    for obj in env.objects:
+        if obj.type.name != 'Font':
+            continue
+        tree = obj.read_typetree()
+        if tree['m_Name'] != 'TextFont':
+            continue
+        tree['m_FontData'] = data
+        tree['m_FontNames'] = [name.split(' (from ')[0]]
+        obj.save_typetree(tree)
+        break
+    else:
+        raise PatchError('resources.assets has no TextFont object.')
+    patched = env.file.save()
+    temporary = assets.with_name(assets.name + '.tmp')
+    temporary.write_bytes(patched)
+    temporary.replace(assets)
+    return name
+
+
+def patch_title_logo(media, enable_russian_logo):
+    """Enable or disable the built-in Russian TitleLogo in globalgamemanagers without rebuilding Unity."""
+    import UnityPy
+
+    ggm = media / 'globalgamemanagers'
+    backup = media / LOGO_BACKUP
+    if enable_russian_logo:
+        if backup.is_file():
+            shutil.copyfile(backup, ggm)
+            backup.unlink()
+        return
+    if not ggm.is_file():
+        return
+    if not backup.is_file():
+        shutil.copyfile(ggm, backup)
+    env = UnityPy.load(str(backup))
+    changed = False
+    for obj in env.objects:
+        if obj.type.name != 'ResourceManager':
+            continue
+        tree = obj.read_typetree()
+        container = tree.get('m_Container', [])
+        filtered = [entry for entry in container if str(entry[0]).lower() != 'vitarussian/titlelogo']
+        if len(filtered) != len(container):
+            tree['m_Container'] = filtered
+            obj.save_typetree(tree)
+            changed = True
+        break
+    if changed:
+        patched = env.file.save()
+        temporary = ggm.with_name(ggm.name + '.tmp')
+        temporary.write_bytes(patched)
+        temporary.replace(ggm)
+
+
+def install_custom_language(steam, translated, installed, label, font=None, progress=None, cancel=None):
+    label = (label or '').strip()
+    if not label or len(label) > 24 or '\n' in label or '\r' in label:
+        raise PatchError('Enter a language name of 1-24 characters.')
+    original = locate(steam)
+    patched = locate_translation(translated)
+    if original == patched:
+        raise PatchError('The translated PC folder must differ from the original Steam folder.')
+    media = installed_media(installed)
+    templates = media / 'StreamingAssets'
+
+    changed, added, ignored, sources = changed_files(original / 'StreamingAssets', patched / 'StreamingAssets', cancel)
+    if not changed:
+        raise PatchError('The translated PC folder has no files that differ from the Steam game.')
+
+    _localization()
+    from convert_failing_forward import convert_bundle
+
+    destination = templates / 'Russian'
+    skipped = [{'path': path, 'reason': 'not present in the Steam game'} for path in added]
+    skipped += [{'path': path, 'reason': 'PC-only or audio file'} for path in ignored]
+    written = []
+    with tempfile.TemporaryDirectory(prefix='.language-', dir=templates) as temp:
+        staging = Path(temp) / 'Russian'
+        staging.mkdir()
+        for index, relative in enumerate(changed, 1):
+            check_cancel(cancel)
+            source = sources[relative]
+            try:
+                raw = source.read_bytes()
+                if relative.lower().endswith('.unity3d'):
+                    if not (templates / relative).is_file():
+                        skipped.append({'path': relative, 'reason': 'no matching bundle in the Vita Media'})
+                        continue
+                    raw, _ = convert_bundle(relative, raw, original / 'StreamingAssets', templates, None)
+            except Exception as error:
+                skipped.append({'path': relative, 'reason': f'{type(error).__name__}: {error}'})
+                continue
+            target = staging / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(raw)
+            written.append(relative)
+            if progress:
+                progress('Custom language', index, len(changed), relative)
+        if not written:
+            raise PatchError('No translated file could be converted; see the log above.')
+        (staging / 'files.txt').write_text('\n'.join(sorted(written, key=str.lower)) + '\n', encoding='utf-8')
+        (staging / LABEL_FILE).write_text(label + '\n', encoding='utf-8')
+        check_cancel(cancel)
+        if destination.exists():
+            shutil.rmtree(destination)
+        publish_overlay(staging, destination, [*written, LABEL_FILE], cancel)
+
+    # Fan Russian voices must not play under another language's name.
+    voice = templates / 'RussianVoice'
+    if voice.exists():
+        shutil.rmtree(voice)
+    auto_bytes, auto_label = (None, None) if font is not None else detect_patch_font(original, translated, patched)
+    font_name = patch_font(media, font, progress, font_bytes=auto_bytes, font_label=auto_label)
+    patch_title_logo(media, False)
+    return {
+        'custom_language': label,
+        'files': len(written),
+        'skipped': skipped,
+        'font': font_name,
+        'message': f'"{label}" installed: {len(written)} translated files, {len(skipped)} skipped.',
+    }

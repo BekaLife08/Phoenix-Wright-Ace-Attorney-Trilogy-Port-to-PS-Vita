@@ -65,8 +65,8 @@ The port is **a loader and a set of code changes only**. It does not contain any
 ### 2. Prepare your game files
 
 1. Make sure you own a licensed Steam PC copy of the game.
-2. Download the **converter archive** (`PWAATVitaConverter-Windows.zip` for Windows, or `PWAATVitaConverter-macOS-Linux.zip` for macOS / Linux) from the [**Releases**](../../releases) page (or the `Release/` folder) and extract all files into one folder.
-   - Keep `PWAATVitaConverter.exe`, `build24-core.pwaatpatch`, and `ffmpeg.exe` in the same folder (download `ffmpeg.exe` from [FFmpeg](https://github.com/FFmpeg/FFmpeg) / [gyan.dev builds](https://www.gyan.dev/ffmpeg/builds/) or have `ffmpeg` in your system `PATH`).
+2. Download the **converter archive** (`PWAATVitaConverter-Windows.zip` for Windows, or `PWAATVitaConverter-macOS-Linux.zip` for macOS / Linux) from the [**Releases**](../../releases) page and extract all files into one folder.
+   - Keep `PWAATVitaConverter.exe`, `build24-core.pwaatpatch`, and `ffmpeg.exe` in the same folder.
 3. Run `PWAATVitaConverter.exe` and choose one of the **4 modes**:
    - **1** — Convert the clean Steam PC version (all 9 official languages) to a complete PS Vita `Media` folder.
    - **2** — Add the **Failing Forward** Russian translation (and fan Russian voice pack) to an existing Vita `Media` folder.

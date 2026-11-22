@@ -175,7 +175,7 @@ def main():
             print('1. Convert the Steam version')
             print('2. Add Failing Forward Russian translation to an existing Vita Media')
             print('3. Convert Steam and add Failing Forward Russian translation')
-            print('4. Install another community translation (custom language, no voice)')
+            print('4. Install another community translation (auto-detects font & voice-over)')
             options = {'1': 'original', '2': 'russian', '3': 'both', '4': 'custom'}
             mode = options.get(input('Select a mode [1-4]: ').strip())
             if not mode:
@@ -213,7 +213,10 @@ def main():
                 print(f"  skipped {item['path']}: {item['reason']}", flush=True)
             print(report['message'], flush=True)
             print('Font: ' + report['font'], flush=True)
-            print('No voice-over is installed for this language; the voice option will show a notice.', flush=True)
+            if report.get('voice_files'):
+                print(f"Voice-over: {report['voice_files']} bank(s) auto-detected and converted to Vita HEVAG.", flush=True)
+            else:
+                print('Voice-over: none detected in patch (voice option will show a notice).', flush=True)
             return 0
         media = installed_media(args.installed) if args.mode == 'russian' else assemble(args, cancelled)
         if args.mode != 'original':

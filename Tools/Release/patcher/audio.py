@@ -112,7 +112,7 @@ def convert_bundle(source: Path, decoder, encoder, cancel=None):
     asset = env.assets[0]
     if asset.unity_version not in ('2017.4.8f1', '2017.4.2f2'):
         raise PatchError('Unsupported Unity version: ' + asset.unity_version)
-    if int(asset.target_platform) not in (19, 30):
+    if int(asset.target_platform) not in (5, 19, 30):
         raise PatchError('Unsupported audio bundle platform')
     objects = list(env.objects)
     if not objects or any(o.type.name not in ('AudioClip', 'AssetBundle') for o in objects):

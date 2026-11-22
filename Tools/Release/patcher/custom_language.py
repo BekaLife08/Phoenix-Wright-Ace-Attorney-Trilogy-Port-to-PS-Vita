@@ -25,7 +25,23 @@ LABEL_FILE = 'language.txt'
 FONT_BACKUP = 'resources.assets.default-font'
 LOGO_BACKUP = 'globalgamemanagers.default-logo'
 TEXT_EXTENSIONS = ('.mdt', '.bin', '.cho')
-VOICE_FOLDERS = ('sound/',)  # audio is never converted here
+VOICE_FOLDERS = ('sound/',)  # handled separately by install_custom_voices
+# The 13 shout voice banks loaded from StreamingAssets/RussianVoice/Sound/se/wsd/
+STOCK_VOICE_HASHES = {
+    'sound/se/wsd/se100.unity3d': '5681de0245143a7dc421a34c775bdbf008e5087fea9c30f9dbc199109c5061c4',
+    'sound/se/wsd/se101.unity3d': '7fd5bad23ac9fc08f18160734c8c31e97d6eef6887e6d59fde46c350d8de91c1',
+    'sound/se/wsd/se102.unity3d': 'f6b2ed295d949bcefd668b337c5e0dc0fe0d9b7cd2ce6c984c661ac7668f4668',
+    'sound/se/wsd/se103.unity3d': '8c1513c09c76389502db02149be147fcd4077a83578dd03ea7558882d7669c3f',
+    'sound/se/wsd/se104.unity3d': '131b31034b6ae1ba1f9854a3fb4ffc0f84c09db233382199a6f8c845b74520f8',
+    'sound/se/wsd/se105.unity3d': '7f2186bfd995ab3ac766c2e62ff48f98953965acc2f450fb0f4017e2f9326f4a',
+    'sound/se/wsd/se106.unity3d': '7be773b7a049aab5521e16d48946e5de873f5249b4ba21cab3797c3c51bea350',
+    'sound/se/wsd/se107.unity3d': 'fec43a34347a604ebd7c1da197b8cca9245a6ba170cc9bbb88928149932db3e4',
+    'sound/se/wsd/se108.unity3d': '752b5feb95fab9fb5d2c8636db177bf5b1c75a77604ed3eb35642edcb3a9241f',
+    'sound/se/wsd/se109.unity3d': '0c29a49a5a50b12efd4297dd09d9194ee48023876f159117e85478b9049d5584',
+    'sound/se/wsd/se10a.unity3d': 'c2d55d11f3a8349127d7f7bfbaac1bd4cbd62abf036ff337ca66737af8f5e947',
+    'sound/se/wsd/se10b.unity3d': '5d1ea9a9855869c83e25f87fd220b9270e4a1395449394bffa72dbf9f1945bfb',
+    'sound/se/wsd/se10c.unity3d': '29ab97e403adae708558be7c5e74623d8fd7238b4562ab76b46312fe0d351a6b',
+}
 # Not usable on Vita: PC/PS4-only button banks and the PC patch's renamed language list.
 SKIPPED = {
     'menu/common/court_record_03_pcu.unity3d',
@@ -372,6 +388,65 @@ def patch_title_logo(media, enable_russian_logo):
         temporary.replace(ggm)
 
 
+def install_custom_voices(original_streaming, patched_streaming, templates, progress=None, cancel=None):
+    """Auto-detect modified shout voice banks (se100..se10c) and convert them to Vita HEVAG."""
+    from . import audio
+
+    candidates = []
+    for rel_lower, stock_hash in sorted(STOCK_VOICE_HASHES.items()):
+        rel = 'Sound/se/wsd/' + rel_lower.rsplit('/', 1)[-1]
+        src = patched_streaming / rel
+        if not src.is_file():
+            dec = patched_streaming / (rel + '.dec')
+            if dec.is_file():
+                src = dec
+            else:
+                continue
+        if original_streaming is not None:
+            orig = original_streaming / rel
+            if orig.is_file() and orig.stat().st_size == src.stat().st_size and _digest(orig) == _digest(src):
+                continue
+        elif _digest(src) == stock_hash:
+            continue
+        candidates.append((rel, src))
+
+    voice_dir = templates / 'RussianVoice'
+    if voice_dir.exists():
+        shutil.rmtree(voice_dir)
+    if not candidates:
+        return [], []
+
+    try:
+        decoder, encoder = audio.tools()
+    except Exception as error:
+        return [], [{'path': rel, 'reason': f'audio tools unavailable: {error}'} for rel, _ in candidates]
+
+    written = []
+    errors = []
+    with tempfile.TemporaryDirectory(prefix='.voice-', dir=templates) as temp:
+        staging = Path(temp) / 'RussianVoice'
+        staging.mkdir()
+        for index, (rel, src) in enumerate(candidates, 1):
+            check_cancel(cancel)
+            try:
+                raw, _ = audio.convert_bundle(src, decoder, encoder, cancel)
+            except Exception as error:
+                errors.append({'path': rel, 'reason': f'{type(error).__name__}: {error}'})
+                continue
+            target = staging / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(raw)
+            written.append(rel)
+            if progress:
+                progress('Custom voice', index, len(candidates), rel)
+        if written:
+            (staging / 'files.txt').write_text('\n'.join(sorted(written, key=str.lower)) + '\n', encoding='utf-8')
+            (staging / 'voice-validated.txt').write_text('ok\n', encoding='utf-8')
+            check_cancel(cancel)
+            publish_overlay(staging, voice_dir, [*written, 'voice-validated.txt'], cancel)
+    return written, errors
+
+
 def install_custom_language(steam, translated, installed, label, font=None, progress=None, cancel=None):
     label = (label or '').strip()
     if not label or len(label) > 24 or '\n' in label or '\r' in label:
@@ -426,17 +501,18 @@ def install_custom_language(steam, translated, installed, label, font=None, prog
             shutil.rmtree(destination)
         publish_overlay(staging, destination, [*written, LABEL_FILE], cancel)
 
-    # Fan Russian voices must not play under another language's name.
-    voice = templates / 'RussianVoice'
-    if voice.exists():
-        shutil.rmtree(voice)
+    # Auto-detect modified shout voice banks (se100..se10c) and convert to Vita HEVAG.
+    # If none are present, RussianVoice is removed so fan Russian voices don't play under another language.
+    voice_written, voice_errors = install_custom_voices(orig_streaming, patched / 'StreamingAssets', templates, progress, cancel)
+    skipped.extend(voice_errors)
     auto_bytes, auto_label = (None, None) if font is not None else detect_patch_font(original, translated, patched)
     font_name = patch_font(media, font, progress, font_bytes=auto_bytes, font_label=auto_label)
     patch_title_logo(media, False)
     return {
         'custom_language': label,
         'files': len(written),
+        'voice_files': len(voice_written),
         'skipped': skipped,
         'font': font_name,
-        'message': f'"{label}" installed: {len(written)} translated files, {len(skipped)} skipped.',
+        'message': f'"{label}" installed: {len(written)} translated files, {len(voice_written)} voice banks, {len(skipped)} skipped.',
     }

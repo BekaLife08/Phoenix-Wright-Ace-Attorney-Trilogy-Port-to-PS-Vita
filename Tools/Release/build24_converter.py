@@ -184,9 +184,8 @@ def main():
             if mode == 'custom':
                 print('\nThe custom language uses the same extra slot as Russian and REPLACES it')
                 print('(including the fan Russian voice pack). Re-run option 2 to bring Russian back.')
-                args.installed = choose_directory('Select the installed Vita Media folder')
-                args.steam = choose_directory('Select the ORIGINAL Steam installation (unmodified)')
-                args.translation = choose_directory('Select the PC game folder with the translation applied')
+                args.installed = choose_directory('Select the installed Vita Media folder (or OBJECTION folder)')
+                args.translation = choose_directory('Select the translation patch folder (or translated PC game folder)')
                 args.label = input('Language name in the settings menu (e.g. Tieng Viet): ').strip()
                 print('Optional: a custom .ttf/.otf font (or press Enter to auto-detect from the patch).')
                 font = input('Font file: ').strip().strip('"')
@@ -203,7 +202,7 @@ def main():
             args = parser.parse_args()
         required = {'original': ('steam', 'output'), 'russian': ('installed', 'russian', 'output'),
                     'both': ('steam', 'russian', 'output'),
-                    'custom': ('installed', 'steam', 'translation', 'label')}
+                    'custom': ('installed', 'translation', 'label')}
         for name in required[args.mode]:
             if getattr(args, name) is None:
                 parser.error(f'--{name} is required in {args.mode} mode.')

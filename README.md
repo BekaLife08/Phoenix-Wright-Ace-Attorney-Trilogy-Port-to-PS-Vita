@@ -71,7 +71,7 @@ The port is **a loader and a set of code changes only**. It does not contain any
    - **1** — Convert the clean Steam PC version (all 9 official languages) to a complete PS Vita `Media` folder.
    - **2** — Add the **Failing Forward** Russian translation (and fan Russian voice pack) to an existing Vita `Media` folder.
    - **3** — Convert the Steam PC version **and** add the **Failing Forward** Russian translation (with fan Russian voice pack) in one step.
-   - **4** — Install **any other community PC translation** (custom language slot, no voice-over): asks for your Vita `Media`, the original Steam folder, the translated PC folder, the language name to display in settings, and an optional `.ttf`/`.otf` font (press Enter to auto-detect the font directly from the patch).
+   - **4** — Install **any other community PC translation** directly into an existing Vita `Media` folder (custom language slot, no Steam PC copy required, no voice-over): asks for your Vita `Media` (or `OBJECTION`), the translation patch folder, the language name to display in settings, and an optional `.ttf`/`.otf` font (press Enter to auto-detect the font directly from the patch).
 4. Choose an output folder — you can pick an empty folder or your existing `OBJECTION` folder directly (files outside `Media` such as `eboot.bin` and `sce_sys` are left untouched).
 5. Wait for it to finish. It will generate a complete **`Media`** folder.
 

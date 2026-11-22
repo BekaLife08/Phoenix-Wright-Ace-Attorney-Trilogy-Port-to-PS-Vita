@@ -17,7 +17,7 @@ import tempfile
 from pathlib import Path
 
 from .core import PatchError, check_cancel
-from .local import locate
+from .local import locate, recipe_root
 from .russian import installed_media, publish_overlay
 
 
@@ -56,12 +56,51 @@ def _digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def changed_files(original, translated, cancel=None):
+def _steam_streaming_hashes():
+    """Return {relative_lower: steam_sha256} for stock Steam StreamingAssets from embedded recipes."""
+    hashes = {}
+    root = recipe_root()
+    for name in (
+        'unchanged.json',
+        'stock-menu.json',
+        'portable-graphics.json',
+        'portable-tight-graphics.json',
+        'portable-atlases.json',
+        'portable-streaming-ext.json',
+        'portable-script-data.json',
+    ):
+        path = root / name
+        if not path.is_file():
+            continue
+        data = json.loads(path.read_text(encoding='utf-8'))
+        entries = data.get('files', data.get('bundles', data.get('entries', [])))
+        if isinstance(entries, list):
+            for item in entries:
+                if isinstance(item, dict) and item.get('path') and item.get('sha256'):
+                    hashes[item['path'].lower()] = item['sha256'].lower()
+    return hashes
+
+
+def _steam_sharedassets_hash():
+    path = recipe_root() / 'steam-source.json'
+    if not path.is_file():
+        return None
+    data = json.loads(path.read_text(encoding='utf-8'))
+    for item in data.get('files', []):
+        if item.get('path') == 'sharedassets0.assets':
+            return item.get('sha256', '').lower()
+    return None
+
+
+def changed_files(original, translated, templates=None, cancel=None):
     """Return (changed, added, ignored, sources) for files under StreamingAssets.
 
     Some translations ship decrypted bundles as ``name.unity3d.dec``; they are
     treated as ``name.unity3d``. ``sources`` maps each relative path to its real file.
+    When ``original`` (Steam StreamingAssets) is None, embedded recipe hashes are used
+    to skip unmodified stock Steam files automatically.
     """
+    stock_hashes = None if original is not None else _steam_streaming_hashes()
     changed, added, ignored, sources = [], [], [], {}
     for path in sorted(translated.rglob('*')):
         check_cancel(cancel)
@@ -78,11 +117,21 @@ def changed_files(original, translated, cancel=None):
         if relative in sources and path.suffix.lower() == '.dec':
             continue
         sources[relative] = path
-        source = original / relative
-        if not source.is_file():
-            added.append(relative)
-        elif source.stat().st_size != path.stat().st_size or _digest(source) != _digest(path):
-            changed.append(relative)
+        if original is not None:
+            source = original / relative
+            if not source.is_file():
+                added.append(relative)
+            elif source.stat().st_size != path.stat().st_size or _digest(source) != _digest(path):
+                changed.append(relative)
+        else:
+            stock_digest = stock_hashes.get(relative.lower())
+            if stock_digest is not None:
+                if _digest(path) != stock_digest:
+                    changed.append(relative)
+            elif templates is not None and (templates / relative).is_file():
+                changed.append(relative)
+            else:
+                added.append(relative)
     return changed, added, ignored, sources
 
 TTF_MAGICS = (b'\x00\x01\x00\x00', b'OTTO', b'true', b'ttcf')
@@ -161,12 +210,19 @@ def _extract_modified_sharedassets_font(original_pwaat, patched_pwaat):
     """If the PC translation modified FOT-ModeMinALargeStd-R in sharedassets0.assets, extract it."""
     import UnityPy
 
-    src_sa = original_pwaat / 'sharedassets0.assets'
     mod_sa = patched_pwaat / 'sharedassets0.assets'
-    if not src_sa.is_file() or not mod_sa.is_file():
+    if not mod_sa.is_file():
         return None, None
-    if src_sa.stat().st_size == mod_sa.stat().st_size and _digest(src_sa) == _digest(mod_sa):
-        return None, None
+    if original_pwaat is not None:
+        src_sa = original_pwaat / 'sharedassets0.assets'
+        if not src_sa.is_file():
+            return None, None
+        if src_sa.stat().st_size == mod_sa.stat().st_size and _digest(src_sa) == _digest(mod_sa):
+            return None, None
+    else:
+        stock_hash = _steam_sharedassets_hash()
+        if stock_hash and _digest(mod_sa) == stock_hash:
+            return None, None
 
     def read_fonts(path):
         found = {}
@@ -180,15 +236,21 @@ def _extract_modified_sharedassets_font(original_pwaat, patched_pwaat):
         return found
 
     try:
-        orig_fonts = read_fonts(src_sa)
         mod_fonts = read_fonts(mod_sa)
+        orig_fonts = read_fonts(original_pwaat / 'sharedassets0.assets') if original_pwaat is not None else None
     except Exception:
         return None, None
     for name, raw in mod_fonts.items():
-        if orig_fonts.get(name) != raw:
-            valid = _validate_font_bytes(raw)
-            if valid:
-                return raw, f'{valid} (from sharedassets0.assets)'
+        if orig_fonts is not None:
+            if orig_fonts.get(name) == raw:
+                continue
+        else:
+            # Stock Steam FOT-ModeMinALargeStd-R is 2,749,440 bytes; only pick modified main font.
+            if 'ModeMinA' not in name or len(raw) == 2749440:
+                continue
+        valid = _validate_font_bytes(raw)
+        if valid:
+            return raw, f'{valid} (from sharedassets0.assets)'
     return None, None
 
 
@@ -314,16 +376,17 @@ def install_custom_language(steam, translated, installed, label, font=None, prog
     label = (label or '').strip()
     if not label or len(label) > 24 or '\n' in label or '\r' in label:
         raise PatchError('Enter a language name of 1-24 characters.')
-    original = locate(steam)
+    original = locate(steam) if steam else None
     patched = locate_translation(translated)
-    if original == patched:
+    if original is not None and original == patched:
         raise PatchError('The translated PC folder must differ from the original Steam folder.')
     media = installed_media(installed)
     templates = media / 'StreamingAssets'
 
-    changed, added, ignored, sources = changed_files(original / 'StreamingAssets', patched / 'StreamingAssets', cancel)
+    orig_streaming = (original / 'StreamingAssets') if original is not None else None
+    changed, added, ignored, sources = changed_files(orig_streaming, patched / 'StreamingAssets', templates, cancel)
     if not changed:
-        raise PatchError('The translated PC folder has no files that differ from the Steam game.')
+        raise PatchError('The translated folder has no files that differ from the stock Steam game.')
 
     _localization()
     from convert_failing_forward import convert_bundle
@@ -344,7 +407,7 @@ def install_custom_language(steam, translated, installed, label, font=None, prog
                     if not (templates / relative).is_file():
                         skipped.append({'path': relative, 'reason': 'no matching bundle in the Vita Media'})
                         continue
-                    raw, _ = convert_bundle(relative, raw, original / 'StreamingAssets', templates, None)
+                    raw, _ = convert_bundle(relative, raw, orig_streaming, templates, None)
             except Exception as error:
                 skipped.append({'path': relative, 'reason': f'{type(error).__name__}: {error}'})
                 continue

@@ -103,6 +103,19 @@ def convert_bundle(rel,raw,pc_root,native_root,animation_fields=None):
                 width,height=max(4,round(sw*scale)),max(4,round(sh*scale))
                 if max(width,height)>2048:
                     width,height=tw,th
+            elif orig_entry is None and (sw,sh)!=(tw,th) and abs(sw*th-sh*tw)>max(sw,sh)*4:
+                # Without a Steam reference, detect a changed aspect ratio (e.g. 1600x1200 vs 1600x800)
+                # and scale by native/source Sprite PPU so sprite rects stay aligned.
+                scale=1.0
+                for sk,(_,ss) in ru_sprites.items():
+                    if ss['m_RD']['texture']['m_PathID']==source_obj.path_id:
+                        ns=next((v[1] for k,v in native_sprites.items() if k.split(' #')[0]==sk),None)
+                        if ns and ss['m_PixelsToUnits']:
+                            scale=ns['m_PixelsToUnits']/ss['m_PixelsToUnits']
+                        break
+                width,height=max(4,round(sw*scale)),max(4,round(sh*scale))
+                if max(width,height)>2048:
+                    width,height=tw,th
             else:
                 width,height=tw,th
             if is_new and max(width,height)>2048:raise ValueError('New Sprite exceeds the Sprite atlas limit')
